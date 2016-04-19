@@ -10,7 +10,10 @@
 		
 		<header class="main-header">
 			<div class="container">
-				<img class="logo" src="#" alt="Логотип Gllacy Shop" width="100" height="100">
+			
+                <a href="#">
+					<img class="logo" src="#" alt="Логотип Gllacy Shop" width="100" height="100">
+				</a>
 				
 				<nav class="main-navigation">
 					<ul>
@@ -51,14 +54,6 @@
 					<a class="bucket" href="#">2 товара</a>
 				</div>
 				
-				<div class="breadcrumbs">
-					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="#">Каталог</a></li>
-						<li><a href="#">Сливочное</a></li>
-					</ul>
-				</div>
-				
 				<div class="header-contacts">
 					<p>
 						С 10 до 20, ежедневно <br>
@@ -70,63 +65,71 @@
 			
 		</header>
 		
-		<main class="container">
+		<div class="main container">
+		
+			<div class="breadcrumbs">
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Сливочное</a></li>
+					</ul>
+				</div>
 			
 			<h1>Сливочное мороженое</h1>
 			
 			<form>
 				
 				<div class="form-item">
-					<label for="sort">Сортировка:</label><br>
+					<label for="sort">Сортировка:</label>
 					<select name="sort" id="sort">
 						<option value="popularity" selected>по популярности</option>
 					</select>
 				</div>
 				
 				<div class="form-item">
-					<label for="price">Цена: 100 руб. &ndash; 500 руб.</label><br>
+					<label for="price">Цена: 100 руб. &ndash; 500 руб.</label>
 					<input type="range" name="price" id="price" 
-						   value="100" min="0" max="900">
+								value="100" min="0" max="900">
 				</div>
 				
 				<div class="form-item">
-					<label>Жирность:</label><br>
-					<label>
-						<input type="radio" name="fat" value="0"> 0%
-					</label>
-					<label>
-						<input type="radio" name="fat" value="<10" checked> до 10%
-					</label>
-					<label>
-						<input type="radio" name="fat" value="<30"> до 20%
-					</label>
-					<label>
-						<input type="radio" name="fat" value=">30"> выше 30%
-					</label>
+					<span>Жирность:</span>
+					
+					<input type="radio" id="fat-0" name="fat" value="0">
+					<label for="fat-0">0%</label>
+					
+					<input type="radio" id="fat-up-to-10" name="fat" value="<10" checked>
+					<label for="fat-up-to-10">до 10%</label>
+					
+					<input type="radio" id="fat-up-to-30" name="fat" value="<30">
+					<label for="fat-up-to-30">до 30%</label>
+					
+					<input type="radio" id="fat-above-30" name="fat" value=">30">
+					<label for="fat-above-30">выше 30%</label>
 				</div>
 				
 				<div class="form-item">
-					<label>Наполнители:</label><br>
-					<label>
-						<input type="checkbox" name="filler" value="chocolate"
-							   checked> шоколадные
-					</label>
-					<label>
-						<input type="checkbox" name="filler" value="sugar"
-							   checked> сахарные присыпки
-					</label>
-					<label>
-						<input type="checkbox" name="filler" value="fruit"
-							   > фрукты
-					</label>
-					<label>
-						<input type="checkbox" name="filler" value="syrup"
-							   > сиропы
-					</label>
-					<label>
-						<input type="checkbox" name="filler" value="jam"
-							   > джемы
-					</label>
+					<span>Наполнители:</span>
+					
+					<input type="checkbox" id="filler-chocolate" name="filler"
+								value="chocolate" checked>
+					<label for="filler-chocolate">шоколадные</label>
+					
+					<input type="checkbox" id="filler-sugar" name="filler"
+								value="sugar" checked>
+					<label for="filler-sugar">сахарные присыпки</label>
+					
+					<input type="checkbox" id="filler-fruit" name="filler"
+								value="fruit">
+					<label for="filler-fruit">фрукты</label>
+					
+					<input type="checkbox" id="filler-syrup" name="filler" 
+								value="syrup">
+					<label for="filler-syrup">сиропы</label>
+					
+					<input type="checkbox" id="filler-jam" name="filler" 
+								value="jam">
+					<label for="filler-jam">джемы</label>
 				</div>
 				
 				<div class="form-item">
@@ -135,91 +138,130 @@
 				
 			</form>
 			
-			<section class="items">
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="100" height="100">
-					<p>
-						Сливочное с апельсиновым джемом и цитрусовой стружкой
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочно-кофейное с кусочками шоколада" width="100" height="100">
-					<p>
-						Сливочно-кофейное с кусочками шоколада
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="100" height="100">
-					<p>
-						Сливочно-клубничное с присыпкой из белого шоколада
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное крем-брюле с карамельной подливкой" width="100" height="100">
-					<p>
-						Сливочное крем-брюле с карамельной подливкой
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с брусничным джемом" width="100" height="100">
-					<p>
-						Сливочное с брусничным джемом
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочно-черничное с цельными ягодами черники" width="100" height="100">
-					<p>
-						Сливочно-черничное с цельными ягодами черники
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочно-лимонное с карамельной присыпкой" width="100" height="100">
-					<p>
-						Сливочно-лимонное с карамельной присыпкой
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с шоколадной стружкой" width="100" height="100">
-					<p>
-						Сливочное с шоколадной стружкой
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное-ванильное с кусочками шоколада" width="100" height="100">
-					<p>
-						Сливочное-ванильное с кусочками шоколада
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с ментоловым сиропом" width="100" height="100">
-					<p>
-						Сливочное с ментоловым сиропом
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с кусочками черного шоколада" width="100" height="100">
-					<p>
-						Сливочное с кусочками черного шоколада
-					</p>
-				</div>
-				
-				<div class="item">
-					<img src="#" alt="Сливочное с мятным сиропом" width="100" height="100">
-					<p>
-						Сливочное с мятным сиропом
-					</p>
-				</div>
+			<section class="products">
+			
+				<ul>
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
+									width="100" height="100">
+						<span class="product-price">310&#8381;&#047;кг</span>
+						<p>
+							Сливочное с апельсиновым джемом и цитрусовой стружкой
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочно-кофейное с кусочками шоколада"
+									width="100" height="100">
+						<span class="product-price">380&#8381;&#047;кг</span>
+						<p>
+							Сливочно-кофейное с кусочками шоколада
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочно-клубничное с присыпкой из белого шоколада"
+									width="100" height="100">
+						<span class="product-price">355&#8381;&#047;кг</span>
+						<p>
+							Сливочно-клубничное с присыпкой из белого шоколада
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#" 
+									alt="Сливочное крем-брюле с карамельной подливкой"
+									width="100" height="100">
+						<span class="product-price">415&#8381;&#047;кг</span>
+						<p>
+							Сливочное крем-брюле с карамельной подливкой
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с брусничным джемом"
+									width="100" height="100">
+						<span class="product-price">325&#8381;&#047;кг</span>
+						<p>
+							Сливочное с брусничным джемом
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочно-черничное с цельными ягодами черники"
+									width="100" height="100">
+						<span class="product-price">410&#8381;&#047;кг</span>
+						<p>
+							Сливочно-черничное с цельными ягодами черники
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочно-лимонное с карамельной присыпкой"
+									width="100" height="100">
+						<span class="product-price">375&#8381;&#047;кг</span>
+						<p>
+							Сливочно-лимонное с карамельной присыпкой
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с шоколадной стружкой" 
+									width="100" height="100">
+						<span class="product-price">320&#8381;&#047;кг</span>
+						<p>
+							Сливочное с шоколадной стружкой
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное-ванильное с кусочками шоколада"
+									width="100" height="100">
+						<span class="product-price">440&#8381;&#047;кг</span>
+						<p>
+							Сливочное-ванильное с кусочками шоколада
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с ментоловым сиропом"
+									width="100" height="100">
+						<span class="product-price">435&#8381;&#047;кг</span>
+						<p>
+							Сливочное с ментоловым сиропом
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с кусочками черного шоколада"
+									width="100" height="100">
+						<span class="product-price">355&#8381;&#047;кг</span>
+						<p>
+							Сливочное с кусочками черного шоколада
+						</p>
+					</li>
+					
+					<li class="product">
+						<img class="product-photo" src="#"
+									alt="Сливочное с мятным сиропом"
+									width="100" height="100">
+						<span class="product-price">420&#8381;&#047;кг</span>
+						<p>
+							Сливочное с мятным сиропом
+						</p>
+					</li>
+					
+				</ul>
 				
 			</section>
 			
@@ -233,23 +275,21 @@
 				<a class="next" href="#">следущая</a>
 			</div>
 			
-		</main>
+		</div>
 		
 		<footer class="main-footer">
-			
-			<section class="footer-social">
+		
+			<div class="footer-social">
 				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
 				<a class="social-btn social-btn-inst" href="#">Инстаграмм</a>
 				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
 				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-			</section>
+			</div>
 			
 			<div class="footer-menu">
-				<ul class="left-column">
+				<ul>
 					<li><a href="#">Для поставщиков</a></li>
 					<li><a href="#">О производстве</a></li>
-				</ul>
-				<ul class="right-column">
 					<li><a href="#">Наши документы</a></li>
 					<li><a href="#">Экологические стандарты</a></li>
 				</ul>
