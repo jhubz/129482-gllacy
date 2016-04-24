@@ -10,7 +10,7 @@
 	<body>
 		
 		<header class="main-header">
-			<div class="container">
+			<div class="container clearfix">
 			
 				<a href="#">
 					<img class="logo" src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
@@ -50,14 +50,14 @@
 				</nav>
 			
 				<div class="user-block">
-					<a class="search" href="#">Поиск</a>
+					<a class="search" href="#"></a>
 					<a class="login" href="#">Вход</a>
 					<a class="bucket" href="#">Пусто</a>
 				</div>
 				
 				<div class="header-contacts">
 					<p>
-						С 10 до 20, ежедневно <br>
+						С 10 до 20, ежедневно
 						<span>8 812 450-25-25</span>
 					</p>
 				</div>
@@ -68,17 +68,21 @@
 		
 		<div class="main container">
 		
-			<div class="slider">
+			<div class="slider clearfix">
 				<p>
 					Крем-брюле и пломбир с малиновым джемом
 				</p>
-				<a class="select" href="#">Слайдер-1</a>
-				<a class="select" href="#">Слайдер-2</a>
-				<a class="select" href="#">Слайдер-3</a>
-				<a class="btn" href="#">Давайте оба!</a>
+				<div class="slider-controls">
+					<div class="slider-selectors">
+						<a class="selector selected" href="#"></a>
+						<a class="selector" href="#"></a>
+						<a class="selector" href="#"></a>
+					</div>
+					<a class="btn" href="#">Давайте оба!</a>
+				</div>
 			</div>
 			
-			<section class="stocks">
+			<section class="stocks clearfix">
 			
                 <div class="stock raspberry">
 					<h2 class="stock-title">Малинка даром&#033;</h2>
@@ -220,28 +224,31 @@
 		</div>
 		
 		<footer class="main-footer">
+			<div class="container">
 			
-			<div class="footer-social">
-				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-				<a class="social-btn social-btn-inst" href="#">Инстаграмм</a>
-				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-			</div>
-			
-			<div class="footer-menu">
-				<ul>
-					<li><a href="#">Для поставщиков</a></li>
-					<li><a href="#">О производстве</a></li>
-					<li><a href="#">Наши документы</a></li>
-					<li><a href="#">Экологические стандарты</a></li>
-				</ul>
-			</div>
-			
-			<div class="copyright">
-				<img src="img/copyright-logo.svg" alt="html academy" width="108" height="37">
-				<p>
-					Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016
-				</p>
+				<div class="footer-social">
+					<a class="social-btn social-btn-tw" href="#">Твиттер</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграмм</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+				</div>
+
+				<div class="footer-menu">
+					<ul>
+						<li><a href="#">Для поставщиков</a></li>
+						<li><a href="#">О производстве</a></li>
+						<li><a href="#">Наши документы</a></li>
+						<li><a href="#">Экологические стандарты</a></li>
+					</ul>
+				</div>
+
+				<div class="copyright">
+					<img src="img/copyright-logo.svg" alt="html academy" width="108" height="37">
+					<p>
+						Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016
+					</p>
+				</div>
+				
 			</div>
 		</footer>
 		

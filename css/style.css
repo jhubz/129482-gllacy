@@ -1,10 +1,15 @@
+html {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-size: 16px;
 	line-height: 22px;
-	color: #ffffff;
 	font-weight: normal;
 	font-family: "Roboto Regular", sans-serif;
 	
+	color: #ffffff;
 	background: #849d8f;
 }
 
@@ -22,4 +27,193 @@ h2 {
 	color: #ffffff;
 	font-weight: bold;
 	font-family: "Roboto Bold", sans-serif;
+}
+
+a {
+	color: white;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.btn {
+	box-sizing: border-box;
+	display: inline-block;
+	
+	text-decoration: none;
+}
+
+
+
+header {
+	padding-top: 10px;
+}
+
+.container {
+	width: 1146px;
+	margin: 0 auto;
+	padding: 0px 27px;
+	
+	/*background: gray;*/
+}
+
+.main-header .logo {
+	float: left;
+}
+
+.main-navigation {
+	float: left;
+	margin-top: 22px;
+}
+
+.main-navigation ul {
+	padding: 0;
+	margin: 0;
+	margin-left: 30px;
+}
+
+.main-navigation li {
+	display: inline-block;
+	margin-right: 18px;
+}
+
+.user-block {
+	float: right;
+	margin-top: 23px;
+}
+
+.user-block a {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 32px;
+	padding-top: 5px;
+	margin-left: 10px;
+	
+	font-size: 14px;
+	vertical-align: top;
+	
+	background: #9db1a5 no-repeat;
+	border-radius: 15px;
+}
+
+.user-block .search {
+	width: 33px;
+	
+	background-image: url(../img/search-icon.svg);
+	background-position: center;
+}
+
+.user-block .login {
+	width: 92px;
+	padding-left: 45px;
+	
+	background-image: url(../img/login-icon.svg);
+	background-position: 16px center;
+}
+
+.user-block .bucket {
+	width: 117px;
+	padding-left: 45px;
+	
+	background-image: url(../img/bucket-empty.svg);
+	background-position: 16px center;
+}
+
+.header-contacts {
+	float: right;
+	clear: right;
+}
+
+.header-contacts p {
+	margin: 0;
+	margin-top: 20px;
+	width: 180px;
+	
+	text-align: right;
+}
+
+.slider {
+	background: url(../img/slider-icecream.png) no-repeat center;
+}
+
+.slider p {
+	padding: 0px 240px;
+	padding-top: 270px;
+	margin: 0;
+	
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.slider-controls {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.slider-controls .slider-selectors {
+	float: left;
+	padding-top: 20px;
+}
+
+.slider-selectors .selector {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 4px;
+	
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.slider-selectors .selected {
+	background: white;
+}
+
+.slider-controls .btn {
+	width: 280px;
+	height: 65px;
+	padding-top: 20px;
+	
+	font-size: 32px;
+	
+	border-radius: 30px;
+	background: linear-gradient(to bottom, #f26843, #db442c);
+}
+
+
+
+.stock {
+	width: 520px;
+	padding: 23px 20px;
+	padding-top: 16px;
+}
+
+.stock a {
+	
+}
+
+.stock h2 {
+	margin-top: 0;
+	margin-bottom: 14px;
+}
+
+.stock p {
+	margin-top: 14px;
+	
+	font-size: 18px;
+}
+
+.raspberry {
+	float: left;
+	
+	background: url(../img/stock-raspberry.jpg) no-repeat;
+}
+
+.chocolate {
+	float: right;
+	
+	background: url(../img/stock-chocolate.jpg) no-repeat;
 }
