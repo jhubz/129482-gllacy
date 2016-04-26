@@ -4,6 +4,7 @@
 	<head>	
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
@@ -52,7 +53,7 @@
 				<div class="user-block">
 					<a class="search" href="#"></a>
 					<a class="login" href="#">Вход</a>
-					<a class="bucket" href="#">Пусто</a>
+					<a class="bucket-empty" href="#">Пусто</a>
 				</div>
 				
 				<div class="header-contacts">
@@ -102,13 +103,17 @@
 				
 			</section>
 			
-			<section class="products">
+			<section class="products clearfix">
 				
 				<div class="product">
-					<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
-					<img class="product-photo" src="img/product/cream-orange.jpg"
-							alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" 
-							width="267" height="267">
+					<div class="hit-container">
+						<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
+					</div>
+					<div class="product-photo-container">
+						<img class="product-photo" src="img/product/cream-orange.jpg"
+								alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" 
+								width="267" height="267">
+					</div>
 					<span class="product-price">310&#8381;&#047;кг</span>
 					<p>
 						Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -116,10 +121,14 @@
 				</div>
 				
 				<div class="product">
-					<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
-					<img class="product-photo" src="img/product/coffee-chocolate.jpg"
-							alt="Сливочно-кофейное с кусочками шоколада"
-							width="267" height="267">
+					<div class="hit-container">
+						<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
+					</div>
+					<div class="product-photo-container">
+						<img class="product-photo" src="img/product/coffee-chocolate.jpg"
+								alt="Сливочно-кофейное с кусочками шоколада"
+								width="267" height="267">
+					</div>
 					<span class="product-price">380&#8381;&#047;кг</span>
 					<p>
 						Сливочно-кофейное с кусочками шоколада
@@ -127,10 +136,14 @@
 				</div>
 				
 				<div class="product">
-					<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
-					<img class="product-photo" src="img/product/strawberry-chocolate.jpg"
-							alt="Сливочно-клубничное с присыпкой из белого шоколада"
-							width="267" height="267">
+					<div class="hit-container">
+						<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
+					</div>
+					<div class="product-photo-container">
+						<img class="product-photo" src="img/product/strawberry-chocolate.jpg"
+								alt="Сливочно-клубничное с присыпкой из белого шоколада"
+								width="267" height="267">
+					</div>
 					<span class="product-price">355&#8381;&#047;кг</span>
 					<p>
 						Сливочно-клубничное с присыпкой из белого шоколада
@@ -138,10 +151,14 @@
 				</div>
 				
 				<div class="product">
-					<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
-					<img class="product-photo" src="img/product/creme-brulee-caramel.jpg" 
-							alt="Сливочное крем-брюле с карамельной подливкой" 
-							width="267" height="267">
+					<div class="hit-container">
+						<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
+					</div>
+					<div class="product-photo-container">
+						<img class="product-photo" src="img/product/creme-brulee-caramel.jpg" 
+								alt="Сливочное крем-брюле с карамельной подливкой" 
+								width="267" height="267">
+					</div>
 					<span class="product-price">415&#8381;&#047;кг</span>
 					<p>
 						Сливочное крем-брюле с карамельной подливкой
@@ -150,39 +167,39 @@
 				
 			</section>
 			
-			<section class="features">
+			<section class="features clearfix">
 				
 				<p class="features-title">
 					Магазин Глейси &ndash; это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
 				</p>
 				
 				<div class="features-left-column">
-					<p class="feature">
+					<p class="feature feature-production">
 						Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
 					</p>
-					<p class="feature">
+					<p class="feature feature-natural">
 						Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
 					</p>
 				</div>
 				
 				<div class="features-right-column">
-					<p class="feature">
+					<p class="feature feature-cooperation">
 						Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
 					</p>
-					<p class="feature">
+					<p class="feature feature-termopack">
 						Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которые не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
 					</p>
 				</div>
 				
 			</section>
 			
-			<div class="advanced-options">
+			<div class="advanced-options clearfix">
 				<div class="blog">
 					<p>
 						Новое в нашем блоге<br>
 						<a href="#">
-							10 способов сервировки<br>
-							фруктовых щербетов<br>
+							10 способов сервировки
+							фруктовых щербетов
 							к столу
 						</a>
 					</p>
@@ -201,36 +218,39 @@
 			</div>
 				
 			<div class="map-contacts">
-			
-				<p class="contact-address">
-					Адрес главного офиса и
-					оффлайн магазина:
-					<span class="bold">
-						ул.Большая Конюшенная
-						19&#047;8, Санкт-Петербург
-					</span>
-				</p>
+				<div class="map-contacts-container">
 				
-				<p class="contact-telephone">
-					Для заказов по телефону:
-					<span class="bold">
-						8 812 450-25-25
-					</span>
-					&#040;с 10 до 20 ежедневно&#041;
-				</p>
-				
-				<a class="btn" href="#">Форма обратной связи</a>
+					<p class="contact-address">
+						Адрес главного офиса и
+						оффлайн магазина:
+						<span class="bold">
+							ул.Большая Конюшенная
+							19&#047;8, Санкт-Петербург
+						</span>
+					</p>
+					
+					<p class="contact-telephone">
+						Для заказов по телефону:
+						<span class="bold">
+							8 812 450-25-25
+						</span>
+						&#040;с 10 до 20 ежедневно&#041;
+					</p>
+					
+					<a class="btn" href="#">Форма обратной связи</a>
+					
+				</div>
 			</div>
 		</div>
 		
-		<footer class="main-footer">
+		<footer class="main-footer clearfix">
 			<div class="container">
 			
 				<div class="footer-social">
-					<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-					<a class="social-btn social-btn-inst" href="#">Инстаграмм</a>
-					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+					<a class="social-btn social-btn-tw" href="#"></a>
+					<a class="social-btn social-btn-inst" href="#"></a>
+					<a class="social-btn social-btn-fb" href="#"></a>
+					<a class="social-btn social-btn-vk" href="#"></a>
 				</div>
 
 				<div class="footer-menu">
