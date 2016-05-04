@@ -13,21 +13,21 @@
 		<header class="main-header">
 			<div class="container clearfix">
 			
-                <a href="#">
+                <a href="index.html">
 					<img class="logo" src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
 				</a>
 				
 				<nav class="main-navigation">
 					<ul>
-						<li class="main-navigation-catalog main-navigation-item active">
-							<a href="#">Каталог</a>
+						<li class="main-navigation-catalog main-navigation-item">
+							<a class="active" href="#">Каталог</a>
 							
 								<ul class="sub-menu hide">
 									<li>
 										<a class="sub-menu-header" href="#">Новинки</a>
 									</li>
-									<li class="active">
-										<a href="catalog-creamy.html">Сливочное</a>
+									<li>
+										<a class="active" href="catalog-creamy.html">Сливочное</a>
 									</li>
 									<li>
 										<a href="#">Щербеты</a>
@@ -41,27 +41,48 @@
 								</ul>
 							
 						</li>
-						<li class="main-navigation-delivery main-navigation-item">
+						<li class="main-navigation-item">
 							<a href="#">Доставка и оплата</a>
 						</li>
-						<li class="main-navigation-about main-navigation-item">
+						<li class="main-navigation-item">
 							<a href="#">О Компании</a>
 						</li>
 					</ul>
 				</nav>
 			
 				<div class="user-block">
-					<a class="search" href="#"></a>
-					<a class="login" href="#">Вход</a>
-					<a class="bucket-full" href="#">2 товара</a>
+					<a class="search user-block-item" href="#"></a>
+					
+						<form class="search-form user-block-form hide">
+							<input type="search" name="search-field" id="search-field" placeholder="Что ищем&#63;">
+						</form>
+					
+					<a class="login user-block-item" href="#">Вход</a>
+					
+						<form class="login-form user-block-form hide">
+							
+							<input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
+							<input type="password" name="password-field" id="password-field" placeholder="Пароль">
+							<a class="btn" href="#">Войти</a>
+							
+							<a class="recover" href="#">Забыли пароль&#63;</a>
+							<a class="registration" href="#">Новая регистрация</a>
+							
+						</form>
+					
+					<a class="bucket-full user-block-item" href="#">2 товара</a>
+					
+					<div class="header-contacts">
+						<p>
+							С 10 до 20, ежедневно
+							<div class="header-telephone">
+								8 812 450-25-25
+							</div>
+						</p>
+					</div>
+					
 				</div>
 				
-				<div class="header-contacts">
-					<p>
-						С 10 до 20, ежедневно
-						<span>8 812 450-25-25</span>
-					</p>
-				</div>
 				
 			</div>
 			
@@ -149,7 +170,7 @@
 									alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" 
 									width="267" height="267">
 						</div>
-						<span class="product-price">310&#8381;&#047;кг</span>
+						<div class="product-price">310&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с апельсиновым джемом и цитрусовой стружкой
 						</p>
@@ -161,7 +182,7 @@
 									alt="Сливочно-кофейное с кусочками шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">380&#8381;&#047;кг</span>
+						<div class="product-price">380&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-кофейное с кусочками шоколада
 						</p>
@@ -173,7 +194,7 @@
 									alt="Сливочно-клубничное с присыпкой из белого шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">355&#8381;&#047;кг</span>
+						<div class="product-price">355&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-клубничное с присыпкой из белого шоколада
 						</p>
@@ -185,7 +206,7 @@
 									alt="Сливочное крем-брюле с карамельной подливкой" 
 									width="267" height="267">
 						</div>
-						<span class="product-price">415&#8381;&#047;кг</span>
+						<div class="product-price">415&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное крем-брюле с карамельной подливкой
 						</p>
@@ -197,7 +218,7 @@
 									alt="Сливочное с брусничным джемом"
 									width="267" height="267">
 						</div>
-						<span class="product-price">325&#8381;&#047;кг</span>
+						<div class="product-price">325&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с брусничным джемом
 						</p>
@@ -209,7 +230,7 @@
 									alt="Сливочно-черничное с цельными ягодами черники"
 									width="267" height="267">
 						</div>
-						<span class="product-price">410&#8381;&#047;кг</span>
+						<div class="product-price">410&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-черничное с цельными ягодами черники
 						</p>
@@ -221,7 +242,7 @@
 									alt="Сливочно-лимонное с карамельной присыпкой"
 									width="267" height="267">
 						</div>
-						<span class="product-price">375&#8381;&#047;кг</span>
+						<div class="product-price">375&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-лимонное с карамельной присыпкой
 						</p>
@@ -233,7 +254,7 @@
 									alt="Сливочное с шоколадной стружкой" 
 									width="267" height="267">
 						</div>
-						<span class="product-price">320&#8381;&#047;кг</span>
+						<div class="product-price">320&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с шоколадной стружкой
 						</p>
@@ -245,7 +266,7 @@
 									alt="Сливочное-ванильное с кусочками шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">440&#8381;&#047;кг</span>
+						<div class="product-price">440&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное-ванильное с кусочками шоколада
 						</p>
@@ -257,7 +278,7 @@
 									alt="Сливочное с ментоловым сиропом"
 									width="267" height="267">
 						</div>
-						<span class="product-price">435&#8381;&#047;кг</span>
+						<div class="product-price">435&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с ментоловым сиропом
 						</p>
@@ -269,7 +290,7 @@
 									alt="Сливочное с кусочками черного шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">355&#8381;&#047;кг</span>
+						<div class="product-price">355&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с кусочками черного шоколада
 						</p>
@@ -281,7 +302,7 @@
 								alt="Сливочное с мятным сиропом"
 								width="267" height="267">
 						</div>
-						<span class="product-price">420&#8381;&#047;кг</span>
+						<div class="product-price">420&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с мятным сиропом
 						</p>
@@ -304,19 +325,18 @@
 		</div>
 		
 		<footer class="main-footer">
-		
 			<div class="container">
 			
 				<div class="footer-social">
-					<a class="social-btn social-btn-tw" href="#"></a>
-					<a class="social-btn social-btn-inst" href="#"></a>
-					<a class="social-btn social-btn-fb" href="#"></a>
-					<a class="social-btn social-btn-vk" href="#"></a>
+					<a class="social-btn social-btn-tw" href="#">Твитер</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 				</div>
 				
 				<div class="footer-menu">
 					<ul>
-						<li><a href="#">Для поставщиков</a></li>
+						<li class="for-providers"><a href="#">Для поставщиков</a></li>
 						<li><a href="#">О производстве</a></li>
 						<li><a href="#">Наши документы</a></li>
 						<li><a href="#">Экологические стандарты</a></li>
@@ -330,8 +350,7 @@
 					</p>
 				</div>
 				
-				</div>
-			
+			</div>
 		</footer>
 		
 	</body>

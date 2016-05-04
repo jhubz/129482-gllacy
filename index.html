@@ -13,15 +13,13 @@
 		<header class="main-header">
 			<div class="container clearfix">
 			
-				<a href="#">
-					<img class="logo" src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
-				</a>
+				<img class="logo" src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
 				
 				<nav class="main-navigation">
 					<ul>
 						<li class="main-navigation-catalog main-navigation-item">
 							<a href="#">Каталог</a>
-							
+								
 								<ul class="sub-menu hide">
 									<li>
 										<a class="sub-menu-header" href="#">Новинки</a>
@@ -42,7 +40,7 @@
 							
 						</li>
 						<li class="main-navigation-item">
-							<a  href="#">Доставка и оплата</a>
+							<a href="#">Доставка и оплата</a>
 						</li>
 						<li class="main-navigation-item">
 							<a href="#">О Компании</a>
@@ -51,16 +49,36 @@
 				</nav>
 			
 				<div class="user-block">
-					<a class="search" href="#"></a>
-					<a class="login" href="#">Вход</a>
-					<a class="bucket-empty" href="#">Пусто</a>
-				</div>
-				
-				<div class="header-contacts">
-					<p>
-						С 10 до 20, ежедневно
-						<span>8 812 450-25-25</span>
-					</p>
+					<a class="search user-block-item" href="#"></a>
+					
+						<form class="search-form user-block-form hide">
+							<input type="search" name="search-field" id="search-field" placeholder="Что ищем&#63;">
+						</form>
+
+					<a class="login user-block-item" href="#">Вход</a>
+					
+						<form class="login-form user-block-form hide">
+							
+							<input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
+							<input type="password" name="password-field" id="password-field" placeholder="Пароль">
+							<a class="btn" href="#">Войти</a>
+							
+							<a class="recover" href="#">Забыли пароль&#63;</a>
+							<a class="registration" href="#">Новая регистрация</a>
+							
+						</form>
+					
+					<a class="bucket-empty user-block-item" href="#">Пусто</a>
+					
+					<div class="header-contacts">
+						<p>
+							С 10 до 20, ежедневно
+							<div class="header-telephone">
+								8 812 450-25-25
+							</div>
+						</p>
+					</div>
+					
 				</div>
 				
 			</div>
@@ -80,7 +98,7 @@
 							<a class="selector" href="#"></a>
 							<a class="selector" href="#"></a>
 						</div>
-						<a class="slider-btn" href="#">Давайте оба!</a>
+						<a class="btn" href="#">Давайте оба!</a>
 					</div>
 				</div>
 			</div>
@@ -119,7 +137,7 @@
 									alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" 
 									width="267" height="267">
 						</div>
-						<span class="product-price">310&#8381;&#047;кг</span>
+						<div class="product-price">310&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное с апельсиновым джемом и цитрусовой стружкой
 						</p>
@@ -134,7 +152,7 @@
 									alt="Сливочно-кофейное с кусочками шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">380&#8381;&#047;кг</span>
+						<div class="product-price">380&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-кофейное с кусочками шоколада
 						</p>
@@ -149,7 +167,7 @@
 									alt="Сливочно-клубничное с присыпкой из белого шоколада"
 									width="267" height="267">
 						</div>
-						<span class="product-price">355&#8381;&#047;кг</span>
+						<div class="product-price">355&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочно-клубничное с присыпкой из белого шоколада
 						</p>
@@ -164,7 +182,7 @@
 									alt="Сливочное крем-брюле с карамельной подливкой" 
 									width="267" height="267">
 						</div>
-						<span class="product-price">415&#8381;&#047;кг</span>
+						<div class="product-price">415&#8381;<span>&#047;кг</span></div>
 						<p>
 							Сливочное крем-брюле с карамельной подливкой
 						</p>
@@ -213,7 +231,7 @@
 							Новое в нашем блоге<br>
 							<a href="#">
 								10 способов сервировки
-								фруктовых щербетов
+								фруктовых щербетов <br>
 								к столу
 							</a>
 						</p>
@@ -232,48 +250,51 @@
 				</div>
 			</div>
 				
-			<div class="map-contacts">
+			<div class="map">
 
+				<div class="contacts-container">	
 					
-					<div class="map-contacts-container">
+					<div class="map-contacts">
 
 						<p class="contact-address">
 							Адрес главного офиса и
-							оффлайн магазина:
-							<span class="bold">
+							оффлайн магазина: <br>
+							<span>
 								ул.Большая Конюшенная
 								19&#047;8, Санкт-Петербург
 							</span>
 						</p>
 
 						<p class="contact-telephone">
-							Для заказов по телефону:
-							<span class="bold">
+							Для заказов по телефону: <br>
+							<span>
 								8 812 450-25-25
-							</span>
+							</span> <br>
 							&#040;с 10 до 20 ежедневно&#041;
 						</p>
 
 						<a class="btn" href="#">Форма обратной связи</a>
 
 					</div>
+				
+				</div>
 					
 			</div>
 		</div>
 		
-		<footer class="main-footer clearfix">
+		<footer class="main-footer">
 			<div class="container">
 			
 				<div class="footer-social">
-					<a class="social-btn social-btn-tw" href="#"></a>
-					<a class="social-btn social-btn-inst" href="#"></a>
-					<a class="social-btn social-btn-fb" href="#"></a>
-					<a class="social-btn social-btn-vk" href="#"></a>
+					<a class="social-btn social-btn-tw" href="#">Твитер</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 				</div>
 
 				<div class="footer-menu">
 					<ul>
-						<li><a href="#">Для поставщиков</a></li>
+						<li class="for-providers"><a href="#">Для поставщиков</a></li>
 						<li><a href="#">О производстве</a></li>
 						<li><a href="#">Наши документы</a></li>
 						<li><a href="#">Экологические стандарты</a></li>
@@ -289,6 +310,24 @@
 				
 			</div>
 		</footer>
+	
+		<div class="feedback-form hide">
+			
+			<span>
+				Мы обязательно вам ответим&#033;
+			</span>
+			<form>
+				<input type="text" placeholder="Как вас зовут&#63;">
+				<input type="email" placeholder="Ваша почта для ответа&#63;">
+				<textarea rows="5" placeholder="Напишите что-нибудь&hellip;">
+					
+				</textarea>
+				<!-- placeholder не работает -->
+				<input type="submit" value="Отправить">
+			</form>
+			
+			<button class="close-feedback-form">Закрыть</button>
+		</div>
 		
 	</body>
 	
