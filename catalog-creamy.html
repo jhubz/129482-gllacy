@@ -51,18 +51,26 @@
 				</nav>
 			
 				<div class="user-block">
-					<a class="search user-block-item" href="#"></a>
+					<a class="search-toggle user-block-item" href="#"></a>
 					
 						<form class="search-form user-block-form hide">
-							<input type="search" name="search-field" id="search-field" placeholder="Что ищем&#63;">
+							<div class="field-container">
+								<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+								<label class="hide" for="search-field">Что ищем&#63;</label>
+							</div>
 						</form>
 					
-					<a class="login user-block-item" href="#">Вход</a>
+					<a class="login-toggle user-block-item" href="#">Вход</a>
 					
 						<form class="login-form user-block-form hide">
-							
-							<input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
-							<input type="password" name="password-field" id="password-field" placeholder="Пароль">
+							<div class="field-container">
+								<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+								<label class="hide" for="login-email-field">Электронная почта</label>
+							</div>
+							<div class="field-container">
+								<input type="password" name="password" id="password-field" placeholder="Пароль">
+								<label class="hide" for="password-field">Пароль</label>
+							</div>
 							<a class="btn" href="#">Войти</a>
 							
 							<a class="recover" href="#">Забыли пароль&#63;</a>
@@ -70,7 +78,7 @@
 							
 						</form>
 					
-					<a class="bucket-full user-block-item" href="#">2 товара</a>
+					<a class="bucket-full-toggle user-block-item" href="#">2 товара</a>
 					
 					<div class="header-contacts">
 						<p>
@@ -82,7 +90,6 @@
 					</div>
 					
 				</div>
-				
 				
 			</div>
 			
@@ -165,6 +172,11 @@
 			
 				<ul>
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/cream-orange.jpg"
 									alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" 
@@ -177,6 +189,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/coffee-chocolate.jpg"
 									alt="Сливочно-кофейное с кусочками шоколада"
@@ -189,6 +206,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/strawberry-chocolate.jpg"
 									alt="Сливочно-клубничное с присыпкой из белого шоколада"
@@ -201,6 +223,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/creme-brulee-caramel.jpg" 
 									alt="Сливочное крем-брюле с карамельной подливкой" 
@@ -213,6 +240,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/cowberry-jam.jpg"
 									alt="Сливочное с брусничным джемом"
@@ -225,6 +257,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/bilberry.jpg"
 									alt="Сливочно-черничное с цельными ягодами черники"
@@ -237,6 +274,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/limon-caramel.jpg"
 									alt="Сливочно-лимонное с карамельной присыпкой"
@@ -249,6 +291,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/chocolate-shavings.jpg"
 									alt="Сливочное с шоколадной стружкой" 
@@ -261,6 +308,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/vanilla-chocolate.jpg"
 									alt="Сливочное-ванильное с кусочками шоколада"
@@ -273,6 +325,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/menthol-syrop.jpg"
 									alt="Сливочное с ментоловым сиропом"
@@ -285,6 +342,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 							<img class="product-photo" src="img/product/black-chocolate.jpg"
 									alt="Сливочное с кусочками черного шоколада"
@@ -297,6 +359,11 @@
 					</li>
 					
 					<li class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="product-photo-container">
 						<img class="product-photo" src="img/product/mint-syrop.jpg"
 								alt="Сливочное с мятным сиропом"

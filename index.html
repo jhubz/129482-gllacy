@@ -49,18 +49,26 @@
 				</nav>
 			
 				<div class="user-block">
-					<a class="search user-block-item" href="#"></a>
+					<a class="search-toggle user-block-item" href="#"></a>
 					
 						<form class="search-form user-block-form hide">
-							<input type="search" name="search-field" id="search-field" placeholder="Что ищем&#63;">
+							<div class="field-container">
+								<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+								<label class="hide" for="search-field">Что ищем&#63;</label>
+							</div>
 						</form>
 
-					<a class="login user-block-item" href="#">Вход</a>
+					<a class="login-toggle user-block-item" href="#">Вход</a>
 					
 						<form class="login-form user-block-form hide">
-							
-							<input type="email" name="email-field" id="email-field" placeholder="Электронная почта">
-							<input type="password" name="password-field" id="password-field" placeholder="Пароль">
+							<div class="field-container">
+								<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+								<label class="hide" for="login-email-field">Электронная почта</label>
+							</div>
+							<div class="field-container">
+								<input type="password" name="password" id="password-field" placeholder="Пароль">
+								<label class="hide" for="password-field">Пароль</label>
+							</div>
 							<a class="btn" href="#">Войти</a>
 							
 							<a class="recover" href="#">Забыли пароль&#63;</a>
@@ -68,7 +76,7 @@
 							
 						</form>
 					
-					<a class="bucket-empty user-block-item" href="#">Пусто</a>
+					<a class="bucket-empty-toggle user-block-item" href="#">Пусто</a>
 					
 					<div class="header-contacts">
 						<p>
@@ -129,6 +137,11 @@
 				<div class="container">
 				
 					<div class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="hit-container">
 							<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
 						</div>
@@ -141,9 +154,18 @@
 						<p>
 							Сливочное с апельсиновым джемом и цитрусовой стружкой
 						</p>
+						
+						
+							
 					</div>
+					
 
 					<div class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="hit-container">
 							<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
 						</div>
@@ -159,6 +181,11 @@
 					</div>
 
 					<div class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="hit-container">
 							<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
 						</div>
@@ -174,6 +201,11 @@
 					</div>
 
 					<div class="product">
+						
+						<div class="hide-product-container hide">
+							<a class="btn" href="#">Быстрый просмотр</a>
+						</div>
+						
 						<div class="hit-container">
 							<img class="hit-product" src="img/hit.jpg" alt="Новинка" width="61" height="61">
 						</div>
@@ -242,7 +274,10 @@
 							Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно &#061;&#041;
 						</p>
 						<form class="subscribe-form">
-							<input type="email" name="email" id="email" placeholder="Электронная почта">
+							<div class="field-container">
+								<input type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта">
+								<label class="hide" for="subscribe-email-field">Электронная почта</label>
+							</div>
 							<input type="submit" value="Отправить">
 						</form>
 					</div>
@@ -317,17 +352,28 @@
 				Мы обязательно вам ответим&#033;
 			</span>
 			<form>
-				<input type="text" placeholder="Как вас зовут&#63;">
-				<input type="email" placeholder="Ваша почта для ответа&#63;">
-				<textarea rows="5" placeholder="Напишите что-нибудь&hellip;">
+				<div class="field-container">
+					<input type="text" name="name" id="name-field" placeholder="Как вас зовут&#63;">
+					<label class="hide" for="name-field">Как вас зовут&#63;</label>
+				</div>
+				<div class="field-container">
+					<input type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа&#63;">
+					<label class="hide" for="feedback-email-field">Ваша почта для ответа&#63;</label>
+				</div>
+				<div class="field-container">
+					<textarea name="feedback-text" id="feedback-text-field" rows="5" placeholder="Напишите что-нибудь&hellip;">
 					
-				</textarea>
+					</textarea>
+					<label class="hide" for="feedback-text-field">Напишите что-нибудь&hellip;</label>
+				</div>
 				<!-- placeholder не работает -->
 				<input type="submit" value="Отправить">
 			</form>
 			
 			<button class="close-feedback-form">Закрыть</button>
+			
 		</div>
+		<div class="modal-overlay hide"></div>
 		
 	</body>
 	

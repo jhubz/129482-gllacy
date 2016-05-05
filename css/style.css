@@ -80,7 +80,13 @@ h2 {
 
 a {
 	color: white;
-	text-decoration: none;
+	text-decoration-color: #9db1a5;
+}
+
+a:hover,
+a:active {
+	color: #ffbc9e;
+	text-decoration-color: #ffbc9e;
 }
 
 .clearfix::after {
@@ -93,21 +99,27 @@ a {
 input[type="submit"] {
 	display: inline-block;
 	vertical-align: top;
+	padding: 10px 20px;
 	
 	font: 18px / 24px "Roboto Bold", Helvetica, sans-serif;
 	
 	background: linear-gradient(to bottom, #f16742, #e54a35);
+	border-radius: 20px;
 	color: white;
 	cursor: pointer;
 	box-shadow: 0 2px 2px 0 #9e4334;
 	outline: none;
+	border: none;
+	text-decoration: none;
 }
 
 .btn:hover,
 input[type="submit"]:hover {
 	background: linear-gradient(to bottom, #f58669, #ec6f5e);
+	color: white;
 	box-shadow: 0 2px 2px 0 #ac1000;
 	outline: none;
+	border: none;
 }
 
 .btn:active,
@@ -115,6 +127,57 @@ input[type="submit"]:active {
 	background: linear-gradient(to top, #e1613e, #d74632);
 	box-shadow: inset 0 2px 2px 0 #ac1000;
 	outline: none;
+	border: none;
+}
+
+.field-container input,
+.field-container textarea {
+	padding: 10px 15px;
+	
+	border-radius: 5px;
+	border: 1px solid #d3d3d2;
+}
+
+.field-container input:hover,
+.field-container textarea:hover {
+	box-shadow: 0 0 0 1px #d3d3d2;
+}
+
+.field-container input:focus,
+.field-container textarea:focus {
+	box-shadow: 0 0 0 1px #8fbdec;
+	outline: none;
+}
+
+.field-container input:focus + label,
+.field-container textarea:focus + label {
+	display: inline;
+	color: #8fbdec;
+}
+
+/*Не работает даже с префиксами*/
+.field-container input:focus::placeholder,
+.field-container textarea:focus::placeholder {
+	color: transparent;
+}
+
+/*Как проверить, что поле заполнено?*/
+
+.field-container {
+	position: relative;
+}
+
+.subscribe-form .field-container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.field-container label {
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	
+	font: 11px / 13px "Roboto Regular", Helvetica, sans-serif;
 }
 
 .hide {
@@ -127,12 +190,11 @@ input[type="submit"]:active {
 	padding: 0px 27px;
 }
 
-/*Куда добавить блок?*/
 .modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 90;
 	
 	width: 100%;
 	height: 100%;
@@ -152,6 +214,7 @@ input[type="submit"]:active {
 
 .main-header {
 	padding-top: 9px;
+	margin-bottom: 30px;
 }
 
 .main-header .logo {
@@ -230,6 +293,9 @@ input[type="submit"]:active {
 	display: block;
 }
 
+/*Как подветить пункт основного меню?*/
+/*Опустить подменю*/
+/*Пункт "Новинки" подчеркивание и padding*/
 .main-navigation-catalog .sub-menu {
 	position: absolute;
 	top: 25px;
@@ -253,6 +319,7 @@ input[type="submit"]:active {
 	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
 	
 	color: #323232;
+	text-decoration: none;
 }
 
 .sub-menu a:hover {
@@ -308,25 +375,30 @@ input[type="submit"]:active {
 	color: #333333;
 }
 
-.user-block .search {
+.user-block .search-toggle {
 	padding: 16px;
 	
 	background-image: url(../img/search-icon.svg);
 	background-position: center;
 }
 
-.user-block .search:hover {
+.user-block .search-toggle:hover {
 	background-image: url(../img/search-icon-active.svg);
 }
 
-.user-block-item:hover + .user-block-form {
+.user-block-item:hover + .user-block-form,
+.user-block .search-form:hover,
+.user-block .login-form:hover {
 	position: absolute;
+	z-index: 30;
 	
 	display: block;
 	
 	background: #f8f7f4;
 }
 
+/*Не подсвечивается кнопка поиска при наведении на форму*/
+/*Опустить форму*/
 .user-block .search-form {
 	left: -162px;
 		
@@ -337,15 +409,20 @@ input[type="submit"]:active {
 	border-radius: 5px; 
 }
 
-.user-block .login {
+.search-form input {
+	width: 239px;
+}
+
+.user-block .login-toggle {
 	padding-right: 17px;
 	margin-left: 7px;
 	
 	background-image: url(../img/login-icon.svg);
 	background-position: 16px center;
+	text-decoration: none;
 }
 
-.user-block .login:hover {
+.user-block .login-toggle:hover {
 	padding-right: 17px;
 	margin-left: 7px;
 	
@@ -353,6 +430,8 @@ input[type="submit"]:active {
 	background-position: 16px center;
 }
 
+/*Не подсвечивается кнопка входа при наведении на форму*/
+/*Опустить форму*/
 .user-block .login-form {
 	left: -166px;
 	
@@ -367,10 +446,6 @@ input[type="submit"]:active {
 .login-form input {
 	width: 239px;
 	margin-bottom: 20px;
-	padding: 9px 15px;
-	
-	border-radius: 5px;
-	border: 1px solid #d3d3d2;
 }
 
 .login-form .recover,
@@ -380,7 +455,15 @@ input[type="submit"]:active {
 	font: 13px / 24px "Roboto Regular", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration: underline;
+	text-decoration-color: #323232;
+}
+
+.login-form .recover:hover,
+.login-form .registration:hover,
+.login-form .recover:active,
+.login-form .registration:active {
+	color: #e84d37;
+	text-decoration-color: #e84d37;
 }
 
 .user-block .btn {
@@ -392,32 +475,34 @@ input[type="submit"]:active {
 	color: #fefefe;
 }
 
-.user-block .bucket-empty,
-.user-block .bucket-full {
+.user-block .bucket-empty-toggle,
+.user-block .bucket-full-toggle {
 	padding-right: 35px;
 	
 	background-position: 16px center;
+	text-decoration: none;
 }
 
-.user-block .bucket-empty {
+.user-block .bucket-empty-toggle {
 	background-image: url(../img/bucket-empty.svg);
 }
 
-.user-block .bucket-empty:hover {
+.user-block .bucket-empty-toggle:hover {
 	background-image: url(../img/bucket-empty-active.svg);
 }
 
-.user-block .bucket-full {
+.user-block .bucket-full-toggle {
 	background-image: url(../img/bucket-full.svg);
 }
 
-.user-block .bucket-full:hover {
+.user-block .bucket-full-toggle:hover {
 	background-image: url(../img/bucket-full.svg);
 }
 
 .header-contacts {
 	position: absolute;
 	right: 0;
+	z-index: 5;
 }
 
 .header-contacts p {
@@ -426,10 +511,14 @@ input[type="submit"]:active {
 	
 	font: 14px / 16px "Roboto Bold", Helvetica, sans-serif;
 	text-align: right;
+	
+	cursor: default;
 }
 
 .header-telephone {
 	font: 22px / 24px "Roboto Black", Helvetica, sans-serif;
+	
+	cursor: default;
 }
 
 
@@ -440,7 +529,7 @@ input[type="submit"]:active {
 
 
 
-
+/*Сделать слайдер*/
 .slider {
 	background: url(../img/slider-icecream.png) no-repeat center;
 }
@@ -453,6 +542,8 @@ input[type="submit"]:active {
 	font-size: 60px;
 	line-height: 60px;
 	text-align: center;
+	
+	cursor: default;
 }
 
 .slider-controls {
@@ -479,7 +570,6 @@ input[type="submit"]:active {
 
 .slider-selectors .selector:hover {
 	background: #b2c1b7;
-	/*cursor: pointer;*/
 }
 
 .slider-selectors .selected {
@@ -528,24 +618,28 @@ input[type="submit"]:active {
 .stock h2 {
 	margin-top: 0;
 	margin-bottom: 14px;
+	
+	cursor: default;
 }
 
 .stock p {
 	margin-top: 14px;
 	
 	font-size: 18px;
+	
+	cursor: default;
 }
 
 .raspberry {
 	float: left;
 	
-	background: url(../img/stock-raspberry.jpg) no-repeat;
+	background: #940016 url(../img/stock-raspberry.jpg) no-repeat;
 }
 
 .chocolate {
 	float: right;
 	
-	background: url(../img/stock-chocolate.jpg) no-repeat;
+	background: #4c2612 url(../img/stock-chocolate.jpg) no-repeat;
 }
 
 
@@ -572,6 +666,15 @@ input[type="submit"]:active {
 	margin-right: 26px;
 }
 
+.product:hover {
+	z-index: 20;
+}
+
+.product:hover p {
+	text-decoration: none;
+	
+}
+
 .products li {
 	margin-bottom: 40px;
 } 
@@ -596,6 +699,8 @@ input[type="submit"]:active {
 	bottom: 60px;
 	
 	font: 45px / 45px "Roboto Bold", Helvetica, sans-serif;
+	
+	cursor: default;
 }
 
 .product-price span {
@@ -613,6 +718,7 @@ input[type="submit"]:active {
 	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
 	text-decoration-color: #9db1a5;
 	/*Добавить отступ подчеркивания от текста*/
+	cursor: default;
 }
 
 .hit-container {
@@ -625,6 +731,27 @@ input[type="submit"]:active {
 	overflow: hidden;
 }
 
+.product .hide-product-container {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	z-index: -10;
+	
+	width: 287px;
+	padding: 350px 0 20px 0;
+	
+	text-align: center;
+	
+	background: #9db1a5;
+	border-radius: 5px;
+}
+
+.product:hover .hide-product-container {
+	display: block;
+}
+
+
+
 
 
 
@@ -636,7 +763,7 @@ input[type="submit"]:active {
 	
 	font: 16px / 22px "Roboto Regular", Helvetica, sans-serif;
 	
-	background: url(../img/features.jpg);
+	background: #f1e6d0 url(../img/features.jpg);
 	border-radius: 15px;
 	color: #323232;
 }
@@ -695,7 +822,7 @@ input[type="submit"]:active {
 	padding: 0 20px;
 	
 	border-radius: 15px;
-	background: url(../img/blog.jpg) no-repeat;
+	background: white url(../img/blog.jpg) no-repeat;
 	color: #323232;
 }
 
@@ -709,8 +836,14 @@ input[type="submit"]:active {
 .blog a {
 	font: 24px / 30px "Roboto Bold", Helvetica, sans-serif;
 	
-	text-decoration: underline;
 	color: #323232;
+	text-decoration-color: #323232;
+}
+
+.blog a:hover,
+.blog a:active {
+	color: #e84d37;
+	text-decoration-color: #e84d37;
 }
 
 .subscribe {
@@ -722,7 +855,7 @@ input[type="submit"]:active {
 	font: 16px / 22px "Roboto Regular", Helvetica, sans-serif;
 	
 	border-radius: 15px;
-	background: url(../img/subscribe.jpg) no-repeat;
+	background: #f8f7f4 url(../img/subscribe.jpg) no-repeat;
 	color: #5a5a5a;
 }
 
@@ -732,25 +865,14 @@ input[type="submit"]:active {
 }
 
 .subscribe-form {
-	margin-bottom: 43px;
+	margin-bottom: 39px;
 	
 	font: 16px / 24px "Roboto Regular", Helvetica, sans-serif;
 }
 
 .subscribe-form input[type="email"] {
 	width: 326px;
-	padding: 10px 20px;
 	margin-right: 10px;
-	
-	border: 1px solid #d3d3d2;
-	border-radius: 5px;
-}
-
-.subscribe-form input[type="submit"] {
-	padding: 10px 20px;
-	
-	border: none;
-	border-radius: 25px;
 }
 
 
@@ -759,7 +881,7 @@ input[type="submit"]:active {
 
 
 
-
+/*Вставить интерактивную карту*/
 .map {
 	height: 430px;
 		
@@ -798,20 +920,11 @@ input[type="submit"]:active {
 	font: 18px / 22px "Roboto Bold", Helvetica, sans-serif;
 }
 
-.map-contacts .btn {
-	padding: 12px 26px;
-	padding-bottom: 15px;
-	
-	font-size: 18px;
-	
-	border-radius: 30px;
-}
-
 .feedback-form {
-	position: absolute;
-	top: 350px;
+	position: fixed;
+	top: 300px;
 	left: 50%;
-	z-index: 20;
+	z-index: 100;
 	
 	margin-left: -260px; /*Подправить*/
 	padding: 15px 25px 5px;
@@ -836,11 +949,7 @@ input[type="submit"]:active {
 
 .feedback-form input,
 .feedback-form textarea {
-	padding: 10px 15px;
 	margin-bottom: 20px;
-	
-	border: 1px solid #d3d3d2;
-	border-radius: 5px;
 }
 
 .feedback-form input[type="text"],
@@ -848,6 +957,7 @@ input[type="submit"]:active {
 	width: 265px;
 }
 
+/*Сделать, чтобы размеры поля нельзя было поменять*/
 .feedback-form textarea {
 	width: 444px;
 }
@@ -860,11 +970,11 @@ input[type="submit"]:active {
 
 .close-feedback-form {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 5px;
+	right: 5px;
 	
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	
 	font-size: 0;
 	
@@ -878,11 +988,13 @@ input[type="submit"]:active {
 .close-feedback-form::after {
 	content: "";
 	position: absolute;
-	top: 9px;
-	left: 1px;
+	/*top: 9px;
+	left: 1px;*/
+	top: 20px;
+	right: 5px;
 	
-	width: 19px;
-	height: 3px;
+	width: 30px;
+	height: 4px;
 	background-color: #323232;
 	border-radius: 1px;
 }
@@ -924,19 +1036,40 @@ input[type="submit"]:active {
 
 .social-btn-tw {
 	background: url(../img/tweeter.svg) center no-repeat;
+	opacity: 0.7;
+}
+
+.social-btn-tw:hover,
+.social-btn-inst:hover,
+.social-btn-fb:hover,
+.social-btn-vk:hover {
+	opacity: 1;
+}
+
+.social-btn-tw:active,
+.social-btn-inst:active,
+.social-btn-fb:active,
+.social-btn-vk:active {
+	opacity: 1;
+	box-shadow: inset 0 2px 2px #9b9b9b;
 }
 
 .social-btn-inst {
 	background: url(../img/instagram.svg) center no-repeat;
+	opacity: 0.7;
 }
 
 .social-btn-fb {
 	background: url(../img/fb.svg) center no-repeat;
+	opacity: 0.7;
 }
 
 .social-btn-vk {
 	background: url(../img/vk.svg) center no-repeat;
+	opacity: 0.7;
 }
+
+
 
 
 
@@ -962,14 +1095,6 @@ input[type="submit"]:active {
 	padding-left: 20px;
 }
 
-.footer-menu a {
-	text-decoration: underline;
-	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
-	text-decoration-color: #9db1a5;
-	/*Добавить отступ подчеркивания от текста*/
-	
-}
-
 .footer-menu .for-providers {
 	font: 13px / 18px "Roboto Bold", Helvetica, sans-serif;
 	
@@ -990,12 +1115,6 @@ input[type="submit"]:active {
 	font: 12px / 18px "Roboto Regular", Helvetica, sans-serif;
 }
 
-.copyright a {
-	text-decoration: underline;
-	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
-	text-decoration-color: #9db1a5;
-	/*Добавить отступ подчеркивания от текста*/
-}
 
 
 
@@ -1005,6 +1124,7 @@ input[type="submit"]:active {
 	margin: 0;
 	padding: 0;
 	
+	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
 	column-count: 2;
 }
 
