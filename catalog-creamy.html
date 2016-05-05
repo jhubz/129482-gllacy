@@ -109,61 +109,101 @@
 			
 			<form class="filters">
 			
-				<label for="sort">Сортировка:</label>
-				<div class="filter popularity-filter">
-					<select name="sort" id="sort">
-						<option value="popularity" selected>по популярности</option>
-					</select>
+				<div class="filter-container">
+					<label for="sort">Сортировка:</label>
+					<div class="filter popularity-filter">
+						<select name="sort" id="sort">
+							<option value="popularity" selected>по популярности</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="filter-container">
+					<label for="price">Цена: 100 руб. &ndash; 500 руб.</label>
+					<div class="filter price-filter">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
+					</div>
 				</div>
 				
-				<label for="price">Цена: 100 руб. &ndash; 500 руб.</label>
-				<div class="filter price-filter">
-					<input type="range" name="price" id="price" 
-								value="100" min="0" max="900">
+				<div class="filter-container">
+					<span>Жирность:</span>
+					<div class="filter fat-filter">
+
+						<input type="radio" id="fat-0" name="fat" value="0">
+						<label for="fat-0">
+							<span class="radio-indicator"></span>
+							0%
+						</label>
+
+						<input type="radio" id="fat-up-to-10" name="fat" value="<10" checked>
+						<label for="fat-up-to-10">
+							<span class="radio-indicator"></span>
+							до 10%
+						</label>
+
+						<input type="radio" id="fat-up-to-30" name="fat" value="<30">
+						<label for="fat-up-to-30">
+							<span class="radio-indicator"></span>
+							до 30%
+						</label>
+
+						<input type="radio" id="fat-above-30" name="fat" value=">30">
+						<label for="fat-above-30">
+							<span class="radio-indicator"></span>
+							выше 30%
+						</label>
+					</div>
 				</div>
 				
-				<span>Жирность:</span>
-				<div class="filter fat-filter">
-					
-					<input type="radio" id="fat-0" name="fat" value="0">
-					<label for="fat-0">0%</label>
-					
-					<input type="radio" id="fat-up-to-10" name="fat" value="<10" checked>
-					<label for="fat-up-to-10">до 10%</label>
-					
-					<input type="radio" id="fat-up-to-30" name="fat" value="<30">
-					<label for="fat-up-to-30">до 30%</label>
-					
-					<input type="radio" id="fat-above-30" name="fat" value=">30">
-					<label for="fat-above-30">выше 30%</label>
-				</div>
-				
+				<div class="filter-container">
 				<span>Наполнители:</span>
-				<div class="filter fill-filter">
-					
-					<input type="checkbox" id="filler-chocolate" name="filler"
-								value="chocolate" checked>
-					<label for="filler-chocolate">шоколадные</label>
-					
-					<input type="checkbox" id="filler-sugar" name="filler"
-								value="sugar" checked>
-					<label for="filler-sugar">сахарные присыпки</label>
-					
-					<input type="checkbox" id="filler-fruit" name="filler"
-								value="fruit">
-					<label for="filler-fruit">фрукты</label>
-					
-					<input type="checkbox" id="filler-syrup" name="filler" 
-								value="syrup">
-					<label for="filler-syrup">сиропы</label>
-					
-					<input type="checkbox" id="filler-jam" name="filler" 
-								value="jam">
-					<label for="filler-jam">джемы</label>
+					<div class="filter fill-filter">
+
+						<input type="checkbox" id="filler-chocolate" name="filler"
+									value="chocolate" checked>
+						<label for="filler-chocolate">
+							<span class="checkbox-indicator"></span>
+							шоколадные
+						</label>
+
+						<input type="checkbox" id="filler-sugar" name="filler"
+									value="sugar" checked>
+						<label for="filler-sugar">
+							<span class="checkbox-indicator"></span>
+							сахарные присыпки
+						</label>
+
+						<input type="checkbox" id="filler-fruit" name="filler"
+									value="fruit">
+						<label for="filler-fruit">
+							<span class="checkbox-indicator"></span>
+							фрукты
+						</label>
+
+						<input type="checkbox" id="filler-syrup" name="filler" 
+									value="syrup">
+						<label for="filler-syrup">
+							<span class="checkbox-indicator"></span>
+							сиропы
+						</label>
+
+						<input type="checkbox" id="filler-jam" name="filler" 
+									value="jam">
+						<label for="filler-jam">
+							<span class="checkbox-indicator"></span>
+							джемы
+						</label>
+					</div>
 				</div>
 				
-				<div class="filter">
-					<input type="submit" value="Применить">
+				<div class="filter-container">
+					<div class="filter">
+						<input class="filter-submit" type="submit" value="Применить">
+					</div>
 				</div>
 				
 			</form>

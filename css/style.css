@@ -293,13 +293,14 @@ input[type="submit"]:active {
 	display: block;
 }
 
-/*Как подветить пункт основного меню?*/
+/*Как подcветить пункт основного меню при наведении на подменю?/
 /*Опустить подменю*/
 /*Пункт "Новинки" подчеркивание и padding*/
 .main-navigation-catalog .sub-menu {
 	position: absolute;
 	top: 25px;
 	left: -7px;
+	z-index: 30;
 	
 	width: 143px;
 	
@@ -1146,12 +1147,132 @@ input[type="submit"]:active {
 	margin-bottom: 40px;
 }
 
+.filter-container > label,
+.filter-container > span {
+	margin-left: 15px;
+	
+	font: 14px / 16px "Roboto Medium", Helvetica, sans-serif;
+}
+
+.filter-container {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 16px;
+}
+
+.filter-container:nth-child(2) {
+	width: 200px;
+}
 
 .filter {
-	display: inline-block;
-	vertical-align: top;
 	padding: 5px 20px;
-	margin-right: 10px;
+	margin-top: 5px;
+	
+	border-radius: 20px;
+	background: #aabab0;
+}
+
+.filter label,
+.filter select {
+	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
+	
+	cursor: pointer;
+}
+
+.fill-filter label,
+.fat-filter label {
+	position: relative;
+	
+	margin-left: 21px;
+	margin-right: 32px;
+}
+
+.fill-filter label:last-child,
+.fat-filter label:last-child{
+	margin-right: 0;
+}
+
+.filter input[type="checkbox"],
+.filter input[type="radio"]{
+	display: none;
+}
+
+.filter label .checkbox-indicator {
+	position: absolute;
+	left: -32px;
+	
+	width: 20px;
+	height: 20px;
+	
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.filter label .checkbox-indicator:hover,
+.filter label:hover .checkbox-indicator {
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.filter input[type="checkbox"]:checked + label .checkbox-indicator::before {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 4px;
+	
+	width: 5px;
+	height: 2px;
+	
+	background: #ffffff;
+	transform: rotate(45deg);
+	border-radius: 1px;
+}
+
+.filter input[type="checkbox"]:checked + label .checkbox-indicator::after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	left: 6px;
+	
+	width: 11px;
+	height: 2px;
+	
+	background: #ffffff;
+	transform: rotate(-45deg);
+	border-radius: 1px;
+}
+
+.filter label .radio-indicator {
+	position: absolute;
+	left: -32px;
+	
+	width: 20px;
+	height: 20px;
+	
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.filter label .radio-indicator:hover,
+.filter label:hover .radio-indicator {
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.filter input[type="radio"]:checked + label .radio-indicator::after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	
+	width: 10px;
+	height: 10px;
+	
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+.filters .filter-container:last-child .filter {
+	padding: 0;
+	margin-top: 40px;
 	
 	border-radius: 20px;
 	background: #aabab0;
@@ -1159,13 +1280,164 @@ input[type="submit"]:active {
 
 .popularity-filter select {
 	border: none;
+	outline: none;
 	background: #aabab0;
+	color: white;
 }
+
+.price-filter {
+	position: relative;
+	
+	padding: 14px 15px 5px 15px;
+	height: 14px;
+}
+
+.price-filter .scale {
+	height: 4px;
+	
+	background: #cbd4cd;
+}
+
+.price-filter .bar {
+	margin-left: 20%;
+	width: 50%;
+	height: 4px;
+	
+	background: #f8f7f4;
+}
+
+.price-filter .toggle {
+	position: absolute;
+	top: 6px;
+	left: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background: #f8f7f4;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.price-filter .toggle-min {
+	left: 39px;
+}
+
+.price-filter .toggle-max {
+	left: 124px;
+}
+
+.filter .filter-submit {
+	padding: 7px 45px;
+	
+	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
+	
+	color: #fbfcfb;
+	box-shadow: inset 0 0 0 2px #fbfcfb;
+	background: #9cb0a4;
+}
+
+.filter .filter-submit:hover {
+	color: #353535;
+	background: #fbfcfb;
+	box-shadow: inset 0 0 0 2px #fbfcfb;
+}
+
+.filter .filter-submit:active {
+	color: #353535;
+	background: #eaeaea;
+	box-shadow: inset 0 2px 0 0 #8e8e8e;
+}
+
+
 
 
 
 
 
 .paginator {
+	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
 	text-align: right;
 }
+
+.paginator a {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 25px;
+	height: 22px;
+	margin-left: 10px;
+	padding-top: 3px;
+	
+	text-align: center;
+	
+	border-radius: 50%;
+	text-decoration: none;
+}
+
+.paginator a:hover {
+	background: #9db1a5;
+	color: #ffffff;
+}
+
+.paginator .prev,
+.paginator .next {
+	position: relative;
+	
+	font-size: 0;
+}
+
+.paginator .prev::after,
+.paginator .prev::before,
+.paginator .next::after,
+.paginator .next::before {
+	content: "";
+	position: absolute;
+	
+	width: 10px;
+	height: 2px;
+	
+	border-radius: 1px;
+	background: #ffffff;
+}
+
+.paginator .prev::after {
+	top: 15px;
+	left: 7px;
+	
+	transform: rotate(45deg);
+}
+
+.paginator .prev::before {
+	top: 9px;
+	left: 7px;
+	
+	transform: rotate(-45deg);
+}
+
+.paginator .next::after {
+	top: 9px;
+	right: 7px;
+	
+	transform: rotate(45deg);
+}
+
+.paginator .next::before {
+	top: 15px;
+	right: 7px;
+	
+	transform: rotate(-45deg);
+}
+
+.paginator .current,
+.paginator .current:hover {
+	background: #ffffff;
+	color: #323232;
+}
+
+/*Убрать фон при наведении*/
+.paginator .disabled {
+	opacity: 0.5;
+	cursor: default;
+	background-color: transparent;
+}
+
