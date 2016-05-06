@@ -276,8 +276,10 @@ input[type="submit"]:active {
 .main-navigation-item > .active {
 	background: #d07058;
 	text-decoration: none;
+	cursor: pointer;
 }
 
+/*Запретить выделение текста при двойном клике*/
 .main-navigation-item > .active:hover {
 	background: #d07058;
 	text-decoration: none;
@@ -294,8 +296,13 @@ input[type="submit"]:active {
 }
 
 /*Как подcветить пункт основного меню при наведении на подменю?/
-/*Опустить подменю*/
 /*Пункт "Новинки" подчеркивание и padding*/
+
+/*Опустить подменю*/
+/*
+	Есть ли у последней ссылки подменю отступ от нижнего края
+	выпадающего списка?
+*/
 .main-navigation-catalog .sub-menu {
 	position: absolute;
 	top: 25px;
@@ -331,11 +338,13 @@ input[type="submit"]:active {
 	background: #f6b5a5;
 }
 
+/*Запретить выделение текста при двойном клике*/
 .sub-menu .active,
 .sub-menu .active:hover,
 .sub-menu .active:active {
 	background: #d07058;
 	color: white;
+	cursor: pointer;
 }
 
 .sub-menu .sub-menu-header {
@@ -389,13 +398,15 @@ input[type="submit"]:active {
 
 .user-block-item:hover + .user-block-form,
 .user-block .search-form:hover,
-.user-block .login-form:hover {
+.user-block .login-form:hover,
+.user-block .bucket-form:hover {
 	position: absolute;
 	z-index: 30;
 	
 	display: block;
 	
 	background: #f8f7f4;
+	border-radius: 5px;
 }
 
 /*Не подсвечивается кнопка поиска при наведении на форму*/
@@ -405,9 +416,7 @@ input[type="submit"]:active {
 		
 	padding: 20px 15px;
 	
-	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif;
-	
-	border-radius: 5px; 
+	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif; 
 }
 
 .search-form input {
@@ -440,8 +449,6 @@ input[type="submit"]:active {
 	padding: 20px 20px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif;
-	
-	border-radius: 5px; 
 }
 
 .login-form input {
@@ -496,9 +503,111 @@ input[type="submit"]:active {
 	background-image: url(../img/bucket-full.svg);
 }
 
+/*Сделать цвет корзины внутри красным*/
 .user-block .bucket-full-toggle:hover {
 	background-image: url(../img/bucket-full.svg);
 }
+
+.user-block .bucket-form {
+	left: -200px;
+	
+	width: 495px;
+	padding: 16px;
+	
+	font: 13px / 16px "Roboto Regular", Helvetica, sans-serif;
+	
+	color: #323232;
+}
+
+.bucket-product-photo-container {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.bucket-form table {
+	margin-bottom: 10px;
+	
+	border-spacing: 10px;
+	border-bottom: 1px solid #ccccc9;
+}
+
+/*Как увеличить отступ от нижнего tr до границы таблицы?*/
+
+.bucket-form table td {
+	vertical-align: middle;
+	
+	cursor: default;
+	/*outline: 1px solid green;*/
+}
+
+.bucket-form .cell-1 {
+	position: relative;
+}
+
+.bucket-form .cell-3 {
+	width: 230px;
+}
+
+.bucket-form .price-per-kg {
+	opacity: 0.5;
+}
+
+.bucket-form .total {
+	float: right;
+	margin-bottom: 10px;
+	
+	font: 15px / 18px "Roboto Bold", Helvetica, sans-serif;
+	
+	cursor: default;
+}
+
+.bucket-form input[type="submit"] {
+	float: right;
+	clear: both;
+}
+
+.delete-from-bucket {
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	
+	width: 10px;
+	height: 10px;
+	
+	font-size: 0;
+	
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	background-color: #f8f7f4;
+}
+
+.delete-from-bucket::before,
+.delete-from-bucket::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: -1px;
+	
+	width: 14px;
+	height: 1px;
+	background-color: #323232;
+	border-radius: 1px;
+}
+
+.delete-from-bucket::before {
+	transform: rotate(45deg);
+}
+
+.delete-from-bucket::after {
+	transform: rotate(-45deg);
+}
+
+
+
+
+
+
 
 .header-contacts {
 	position: absolute;
@@ -1051,7 +1160,7 @@ input[type="submit"]:active {
 .social-btn-inst:active,
 .social-btn-fb:active,
 .social-btn-vk:active {
-	opacity: 1;
+	opacity: 0.8;
 	box-shadow: inset 0 2px 2px #9b9b9b;
 }
 
