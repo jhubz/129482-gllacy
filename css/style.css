@@ -50,6 +50,14 @@
 
 
 
+/*
+	ПРИ МАСШТАБИРОВАНИИ:
+	ТЕКСТ НАЧИНАЕТ ПО-ДРУГОМУ ПЕРЕНОСИТЬСЯ И ЛОМАЕТ СЕТКУ
+	radio button В ФИЛЬТРЕ (ОТМЕЧЕННЫЙ) НАЧИНАЕТ ВИЗУАЛЬНО СМЕЩАТЬСЯ
+
+	СЛАЙДЕР:
+	СОСТОЯНИЕ ССЫЛОК (ПРИ НАВЕДЕНИИ) ПРИ 2-ОМ И 3-ЕМ СЛАЙДЕ?
+*/
 
 
 html {
@@ -61,7 +69,33 @@ body {
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	
 	color: #ffffff;
-	background: #849d8f;
+	background-color: #849d8f;
+}
+
+.body-content {
+	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
+	
+	color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+	transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.body-content::before,
+.body-content::after {
+	content: "";
+	
+	visibility: hidden;
+}
+
+.body-content::before,
+.body-content::after {
+	background-image: url(../img/slide-3.png);
+}
+
+.body-content::after {
+	background-image: url(../img/slide-2.png);
 }
 
 h1 {
@@ -98,9 +132,9 @@ a:active {
 .btn,
 input[type="submit"] {
 	display: inline-block;
-	vertical-align: top;
 	padding: 10px 20px;
 	
+	vertical-align: top;
 	font: 18px / 24px "Roboto Bold", Helvetica, sans-serif;
 	
 	background: linear-gradient(to bottom, #f16742, #e54a35);
@@ -169,6 +203,7 @@ input[type="submit"]:active {
 
 .subscribe-form .field-container {
 	display: inline-block;
+	
 	vertical-align: top;
 }
 
@@ -243,9 +278,9 @@ input[type="submit"]:active {
 
 .main-navigation-item {
 	display: inline-block;
-	vertical-align: top;
 	margin-right: 2px;
 	
+	vertical-align: top;
 	font-size: 16px;
 }
 
@@ -372,12 +407,17 @@ input[type="submit"]:active {
 
 .user-block .user-block-item {
 	display: inline-block;
-	vertical-align: middle;
 	padding: 7px 0 9px 44px;
 	margin-left: 5px;
 	
-	background: #9db1a5 no-repeat;
+	vertical-align: middle;
+	
+	background-color: #9db1a5;
+	background-repeat: no-repeat;
 	border-radius: 15px;
+	
+	/*сделать только для главной страницы*/
+	transition: background-color 0.5s ease;
 }
 
 .user-block .user-block-item:hover {
@@ -617,7 +657,7 @@ input[type="submit"]:active {
 
 .header-contacts p {
 	margin: 0;
-	margin-top: 20px;
+	margin-top: 17px;
 	
 	font: 14px / 16px "Roboto Bold", Helvetica, sans-serif;
 	text-align: right;
@@ -626,6 +666,8 @@ input[type="submit"]:active {
 }
 
 .header-telephone {
+	margin-top: 4px;
+	
 	font: 22px / 24px "Roboto Black", Helvetica, sans-serif;
 	
 	cursor: default;
@@ -639,65 +681,129 @@ input[type="submit"]:active {
 
 
 
-/*Сделать слайдер*/
-.slider {
-	background: url(../img/slider-icecream.png) no-repeat center;
+
+
+body > input[type="radio"] {
+	display: none;
 }
 
-.slider p {
-	padding: 360px 200px 20px;
-	margin: 0;
+.slider {
+	padding-top: 270px;
+	margin-bottom: 40px;
+	
+	text-align: center;
+	
+	color: #ffffff;
+	/*background: url(../img/slider-icecream.png) no-repeat top center;*/
+}
+
+.slider-container {
+	position: relative;
+}
+
+.slide {
+	display: none;
+}
+
+.slide-title {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 30px;
 	
 	font: 60px / 60px "Roboto Black", Helvetica, sans-serif;
-	font-size: 60px;
-	line-height: 60px;
-	text-align: center;
-	
-	cursor: default;
 }
 
-.slider-controls {
-	padding: 40px 0;
-	
-	text-align: center;
-}
-
-.slider-controls .slider-selectors {
-	float: left;
-	padding-top: 20px;
-}
-
-.slider-selectors .selector {
-	display: inline-block;
-	vertical-align: top;
-	width: 15px;
-	height: 15px;
-	margin-right: 4px;
-	
-	border: 3px solid white;
-	border-radius: 50%;
-}
-
-.slider-selectors .selector:hover {
-	background: #b2c1b7;
-}
-
-.slider-selectors .selected {
-	background: white;
-}
-
-.slider-selectors .selected:hover {
-	background: white;
-}
-
-.slider .btn {
-	padding: 12px 40px;
+.slide-btn {
+	padding: 12px 50px;
 	
 	font: 32px / 44px "Roboto Bold", Helvetica, sans-serif;
 	font-size: 32px;
 	
-	border-radius: 30px;
+	background: #f26843;
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 100px;
 }
+
+.slide-btn:hover {
+	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+}
+
+.slide-btn:active {
+	background: linear-gradient(to bottom, #d84327 0%, #e1613e 100%);
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 25px;
+	left: 0;
+	z-index: 20;
+	
+	font-size: 0;
+}
+
+.slider-controls label {
+	display:inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	
+	vertical-align: top;
+	
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+}
+
+#slider-btn-1:checked ~ .body-content #slide-1,
+#slider-btn-2:checked ~ .body-content #slide-2,
+#slider-btn-3:checked ~ .body-content #slide-3 {
+	display: block;
+}
+
+#slider-btn-1:checked ~ .body-content {
+	background-color: #849d8f;
+	background-image: url(../img/slide-1.png);
+}
+
+#slider-btn-1:checked ~ .body-content .user-block-item {
+	background-color: #9db1a5;
+}
+
+#slider-btn-2:checked ~ .body-content .user-block-item {
+	background-color: #a5b0bd;
+}
+
+#slider-btn-3:checked ~ .body-content .user-block-item {
+	background-color: #bcada7;
+}
+
+#slider-btn-1:checked ~ .body-content .user-block-item:hover,
+#slider-btn-2:checked ~ .body-content .user-block-item:hover,
+#slider-btn-3:checked ~ .body-content .user-block-item:hover {
+	background-color: #f7f6f3;
+	color: #333333;
+}
+
+#slider-btn-2:checked ~ .body-content {
+	background-color: #8996a6;
+	background-image: url(../img/slide-2.png);
+}
+
+#slider-btn-3:checked ~ .body-content {
+	background-color: #9d8b84;
+	background-image: url(../img/slide-3.png);
+}
+
+#slider-btn-1:checked ~ .body-content label[for="slider-btn-1"],
+#slider-btn-2:checked ~ .body-content label[for="slider-btn-2"],
+#slider-btn-3:checked ~ .body-content label[for="slider-btn-3"] {
+	background-color: #ffffff;
+}
+
+
+
 
 
 
@@ -1126,6 +1232,7 @@ input[type="submit"]:active {
 
 
 
+
 .footer-social {
 	float: left;
 	padding-top: 35px;
@@ -1133,11 +1240,11 @@ input[type="submit"]:active {
 
 .footer-social .social-btn {
 	display: inline-block;
-	vertical-align: top;
 	width: 30px;
 	height: 30px;
 	margin-right: 12px;
 	
+	vertical-align: top;
 	font-size: 0;
 	
 	border: 3px solid #c2cec7;
@@ -1217,6 +1324,7 @@ input[type="submit"]:active {
 .copyright {
 	float: right;
 	padding-top: 20px;
+	padding-bottom: 40px;
 }
 
 .copyright p {
@@ -1240,6 +1348,7 @@ input[type="submit"]:active {
 
 .breadcrumbs li {
 	display: inline-block;
+	
 	vertical-align: top;
 }
 
@@ -1265,8 +1374,9 @@ input[type="submit"]:active {
 
 .filter-container {
 	display: inline-block;
-	vertical-align: bottom;
 	margin-right: 16px;
+	
+	vertical-align: bottom;
 }
 
 .filter-container:nth-child(2) {
@@ -1471,12 +1581,12 @@ input[type="submit"]:active {
 
 .paginator a {
 	display: inline-block;
-	vertical-align: bottom;
 	width: 25px;
 	height: 22px;
 	margin-left: 10px;
 	padding-top: 3px;
 	
+	vertical-align: bottom;
 	text-align: center;
 	
 	border-radius: 50%;
