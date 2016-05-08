@@ -51,10 +51,6 @@
 
 
 /*
-	ПРИ МАСШТАБИРОВАНИИ:
-	ТЕКСТ НАЧИНАЕТ ПО-ДРУГОМУ ПЕРЕНОСИТЬСЯ И ЛОМАЕТ СЕТКУ
-	radio button В ФИЛЬТРЕ (ОТМЕЧЕННЫЙ) НАЧИНАЕТ ВИЗУАЛЬНО СМЕЩАТЬСЯ
-
 	СЛАЙДЕР:
 	СОСТОЯНИЕ ССЫЛОК (ПРИ НАВЕДЕНИИ) ПРИ 2-ОМ И 3-ЕМ СЛАЙДЕ?
 */
@@ -99,7 +95,7 @@ body {
 }
 
 h1 {
-	margin-top: 0px;
+	margin-top: 0;
 
 	font: 35px / 41px "Roboto Bold", Helvetica, sans-serif;
 
@@ -114,13 +110,11 @@ h2 {
 
 a {
 	color: white;
-	text-decoration-color: #9db1a5;
 }
 
 a:hover,
 a:active {
 	color: #ffbc9e;
-	text-decoration-color: #ffbc9e;
 }
 
 .clearfix::after {
@@ -142,8 +136,8 @@ input[type="submit"] {
 	color: white;
 	cursor: pointer;
 	box-shadow: 0 2px 2px 0 #9e4334;
-	outline: none;
 	border: none;
+	outline: none;
 	text-decoration: none;
 }
 
@@ -152,7 +146,6 @@ input[type="submit"]:hover {
 	background: linear-gradient(to bottom, #f58669, #ec6f5e);
 	color: white;
 	box-shadow: 0 2px 2px 0 #ac1000;
-	outline: none;
 	border: none;
 }
 
@@ -160,7 +153,6 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
 	background: linear-gradient(to top, #e1613e, #d74632);
 	box-shadow: inset 0 2px 2px 0 #ac1000;
-	outline: none;
 	border: none;
 }
 
@@ -189,14 +181,6 @@ input[type="submit"]:active {
 	color: #8fbdec;
 }
 
-/*Не работает даже с префиксами*/
-.field-container input:focus::placeholder,
-.field-container textarea:focus::placeholder {
-	color: transparent;
-}
-
-/*Как проверить, что поле заполнено?*/
-
 .field-container {
 	position: relative;
 }
@@ -222,7 +206,7 @@ input[type="submit"]:active {
 .container {
 	width: 1146px;
 	margin: 0 auto;
-	padding: 0px 27px;
+	padding: 0 27px;
 }
 
 .modal-overlay {
@@ -254,6 +238,8 @@ input[type="submit"]:active {
 
 .main-header .logo {
 	float: left;
+	width: 154px;
+	height: 64px;
 	margin-left: -6px;
 }
 
@@ -267,7 +253,8 @@ input[type="submit"]:active {
 	margin-top: 20px;
 	margin-left: 17px;
 	
-	font: 0 / 18px "Roboto Bold", Helvetica, sans-serif;
+	font: 16px / 18px "Roboto Bold", Helvetica, sans-serif;
+	font-size: 0;
 }
 
 .main-navigation ul {
@@ -277,6 +264,8 @@ input[type="submit"]:active {
 }
 
 .main-navigation-item {
+	position: relative;
+	
 	display: inline-block;
 	margin-right: 2px;
 	
@@ -285,24 +274,48 @@ input[type="submit"]:active {
 }
 
 .main-navigation-item > a {
+	position: relative;
+	
 	padding: 4px 13px 6px 13px;
 
-	text-decoration: underline;
-	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
-	text-decoration-color: #9db1a5;
-	/*Добавить отступ подчеркивания от текста*/
+	text-decoration: none;
 	
 	border-radius: 15px;
 }
 
-.main-navigation-item > a:hover {
-	text-decoration: none;
+.main-navigation-item > a::after {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	left: 13px;
+	right: 13px;
+	
+	height: 1px;
+	
+	background: #adbdb4;
+}
+
+.main-navigation-item > a:hover::after {
+	width: 0;
+	height: 0;
+}
+
+.main-navigation-item:hover > a {
 	background: #f7f6f3;
 	color: #333333;
 }
 
+.main-navigation-item:hover > .active {
+	background: #d07058;
+	color: #ffffff;
+}
+
+.main-navigation-item:hover > a::after {
+	width: 0;
+	height: 0;
+}
+
 .main-navigation-item > a:active {
-	text-decoration: none;
 	background: #f7f6f3;
 	color: #333333;
 	box-shadow: inset 0 2px 1px #696969;
@@ -314,7 +327,11 @@ input[type="submit"]:active {
 	cursor: pointer;
 }
 
-/*Запретить выделение текста при двойном клике*/
+.main-navigation-item > .active::after {
+	width: 0;
+	height: 0;
+}
+
 .main-navigation-item > .active:hover {
 	background: #d07058;
 	text-decoration: none;
@@ -326,33 +343,31 @@ input[type="submit"]:active {
 
 
 
-.main-navigation-catalog:hover .sub-menu {
+.sub-menu-container {
+	padding-top: 10px;
+}
+
+.main-navigation-catalog:hover .sub-menu-container {
 	display: block;
 }
 
-/*Как подcветить пункт основного меню при наведении на подменю?/
 /*Пункт "Новинки" подчеркивание и padding*/
 
 /*Опустить подменю*/
-/*
-	Есть ли у последней ссылки подменю отступ от нижнего края
-	выпадающего списка?
-*/
-.main-navigation-catalog .sub-menu {
+.main-navigation-catalog .sub-menu-container {
 	position: absolute;
 	top: 25px;
 	left: -7px;
 	z-index: 30;
 	
 	width: 143px;
-	
-	background: #f8f7f4;
 }
 
 .sub-menu {
 	padding-bottom: 8px;
 	
 	border-radius: 5px;
+	background: #f8f7f4;
 }
 
 .sub-menu a {
@@ -373,7 +388,6 @@ input[type="submit"]:active {
 	background: #f6b5a5;
 }
 
-/*Запретить выделение текста при двойном клике*/
 .sub-menu .active,
 .sub-menu .active:hover,
 .sub-menu .active:active {
@@ -383,12 +397,28 @@ input[type="submit"]:active {
 }
 
 .sub-menu .sub-menu-header {
-	margin: 0 9px 0 6px;
-	padding: 10px 10px 12px 14px;
+	position: relative;
+	
+	padding: 10px 9px 12px 20px;
 	
 	font: 14px / 16px "Roboto Bold", Helvetica, sans-serif;
 	
-	border-bottom: 1px solid #d1d0ce;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/*border-bottom: 1px solid #d1d0ce;*/
+}
+
+.sub-menu .sub-menu-header:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	
+	height: 1px;
+	
+	background: #d1d0ce;
+	
 }
 
 
@@ -416,7 +446,6 @@ input[type="submit"]:active {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	
-	/*сделать только для главной страницы*/
 	transition: background-color 0.5s ease;
 }
 
@@ -424,6 +453,13 @@ input[type="submit"]:active {
 	background-color: #f7f6f3;
 	color: #333333;
 }
+
+/* Сделать, чтобы кнопка переключателя подсвечивалась, при наведени на форму
+.search-form:hover ~ .search-toggle {
+	background-color: #f7f6f3;
+	color: #333333;
+}
+*/
 
 .user-block .search-toggle {
 	padding: 16px;
@@ -436,27 +472,37 @@ input[type="submit"]:active {
 	background-image: url(../img/search-icon-active.svg);
 }
 
-.user-block-item:hover + .user-block-form,
-.user-block .search-form:hover,
-.user-block .login-form:hover,
-.user-block .bucket-form:hover {
-	position: absolute;
-	z-index: 30;
-	
+.user-block-form-container {
+	padding-top: 10px;
+}
+
+.user-block-item:hover + .user-block-form-container,
+.user-block .search-form-container:hover,
+.user-block .login-form-container:hover,
+.user-block .bucket-form-container:hover {
 	display: block;
-	
+}
+
+.user-block-item + .user-block-form-container {
+	position: absolute;
+	top: 32px;
+	z-index: 30;
+}
+
+.user-block-form {
 	background: #f8f7f4;
 	border-radius: 5px;
 }
 
 /*Не подсвечивается кнопка поиска при наведении на форму*/
-/*Опустить форму*/
-.user-block .search-form {
-	left: -162px;
-		
-	padding: 20px 15px;
+.user-block .search-form-container {
+	left: -230px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif; 
+}
+
+.user-block .search-form {
+	padding: 20px 15px;
 }
 
 .search-form input {
@@ -481,14 +527,16 @@ input[type="submit"]:active {
 }
 
 /*Не подсвечивается кнопка входа при наведении на форму*/
-/*Опустить форму*/
-.user-block .login-form {
-	left: -166px;
+.user-block .login-form-container {
+	left: -170px;
 	
-	width: 277px;
-	padding: 20px 20px;
+	width: 310px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif;
+}
+
+.user-block .login-form {
+	padding: 20px 20px;
 }
 
 .login-form input {
@@ -498,12 +546,40 @@ input[type="submit"]:active {
 
 .login-form .recover,
 .login-form .registration {
+	position: relative;
+	
 	margin-right: 15px;
 	
 	font: 13px / 24px "Roboto Regular", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration-color: #323232;
+	text-decoration: none;
+}
+
+.login-form .recover::after,
+.login-form .registration::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	
+	
+	width: 100%;
+	height: 1px;
+	
+	background: #b2b2b2;
+}
+
+.login-form .recover:hover::after,
+.login-form .registration:hover::after {
+	background: #f9cdc4;
+}
+
+.login-form .recover:active::after,
+.login-form .registration:active::after {
+	left: -10px;
+	
+	background: #f9cdc4;
 }
 
 .login-form .recover:hover,
@@ -511,7 +587,6 @@ input[type="submit"]:active {
 .login-form .recover:active,
 .login-form .registration:active {
 	color: #e84d37;
-	text-decoration-color: #e84d37;
 }
 
 .user-block .btn {
@@ -543,20 +618,18 @@ input[type="submit"]:active {
 	background-image: url(../img/bucket-full.svg);
 }
 
-/*Сделать цвет корзины внутри красным*/
-.user-block .bucket-full-toggle:hover {
-	background-image: url(../img/bucket-full.svg);
-}
-
-.user-block .bucket-form {
-	left: -200px;
+.user-block .bucket-form-container {
+	left: -235px;
 	
-	width: 495px;
-	padding: 16px;
+	width: 520px;
 	
 	font: 13px / 16px "Roboto Regular", Helvetica, sans-serif;
 	
 	color: #323232;
+}
+
+.user-block .bucket-form {
+	padding: 16px;	
 }
 
 .bucket-product-photo-container {
@@ -566,6 +639,8 @@ input[type="submit"]:active {
 
 .bucket-form table {
 	margin-bottom: 10px;
+	
+	padding-bottom: 5px;
 	
 	border-spacing: 10px;
 	border-bottom: 1px solid #ccccc9;
@@ -582,6 +657,11 @@ input[type="submit"]:active {
 
 .bucket-form .cell-1 {
 	position: relative;
+}
+
+.bucket-form .cell-2 img {
+	width: 33px;
+	height: 33px;
 }
 
 .bucket-form .cell-3 {
@@ -617,9 +697,12 @@ input[type="submit"]:active {
 	font-size: 0;
 	
 	border: 0;
-	outline: 0;
 	cursor: pointer;
 	background-color: #f8f7f4;
+}
+
+.delete-from-bucket:focus {
+	outline: 0;
 }
 
 .delete-from-bucket::before,
@@ -802,6 +885,12 @@ body > input[type="radio"] {
 	background-color: #ffffff;
 }
 
+label[for="slider-btn-1"]:hover,
+label[for="slider-btn-2"]:hover,
+label[for="slider-btn-3"]:hover {
+	background-color: #b2c1b7;
+}
+
 
 
 
@@ -872,6 +961,8 @@ body > input[type="radio"] {
 .products ul {
 	margin: 0px;
 	padding: 0px;
+	
+	list-style: none;
 }
 
 .product {
@@ -1050,16 +1141,42 @@ body > input[type="radio"] {
 }
 
 .blog a {
+	position: relative;
+	
 	font: 24px / 30px "Roboto Bold", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration-color: #323232;
+	text-decoration: none;
 }
 
 .blog a:hover,
 .blog a:active {
 	color: #e84d37;
-	text-decoration-color: #e84d37;
+	text-decoration: none;
+}
+
+/*Как добавить подчеркивание на все 3 строки ссылки?*/
+.blog a::after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	
+	
+	width: 100%;
+	height: 1px;
+	
+	background: #b2b2b2;
+}
+
+.blog a:hover::after {
+	background: #f9cdc4;
+}
+
+.blog a:active::after {
+	left: -10px;
+	
+	background: #f9cdc4;
 }
 
 .subscribe {
@@ -1173,9 +1290,9 @@ body > input[type="radio"] {
 	width: 265px;
 }
 
-/*Сделать, чтобы размеры поля нельзя было поменять*/
 .feedback-form textarea {
 	width: 444px;
+	resize: none;
 }
 
 .feedback-form input[type="submit"] {
@@ -1203,9 +1320,6 @@ body > input[type="radio"] {
 .close-feedback-form::before,
 .close-feedback-form::after {
 	content: "";
-	position: absolute;
-	/*top: 9px;
-	left: 1px;*/
 	top: 20px;
 	right: 5px;
 	
@@ -1308,8 +1422,45 @@ body > input[type="radio"] {
 	text-align: left;
 }
 
-.footer-menu li {
+.footer-menu li a {
+	position: relative;
+	
 	padding-left: 20px;
+}
+
+.footer-menu li a {
+	
+	text-decoration: none;
+	
+	/*background: green;*/
+}
+
+.footer-menu li a::after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 20px;
+	right: 0;
+	
+	height: 1px;
+	
+	background: #a9bbb1;
+}
+
+.footer-menu li a:hover::after {
+	background: #a7a294;
+}
+
+.footer-menu li a:active::after {
+	left: 10px;
+	right: 10px;
+	
+	background: #a7a294;
+}
+
+.footer-menu li a:hover,
+.footer-menu li a:active {
+	color: #ffbc9e;
 }
 
 .footer-menu .for-providers {
@@ -1327,10 +1478,48 @@ body > input[type="radio"] {
 	padding-bottom: 40px;
 }
 
+.copyright img {
+	width: 108px;
+	height: 37px;
+}
+
 .copyright p {
 	margin: 0;
 	
 	font: 12px / 18px "Roboto Regular", Helvetica, sans-serif;
+}
+
+.copyright p a {
+	position: relative;
+	text-decoration: none;
+}
+
+.copyright p a::after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	
+	width: 100%;
+	height: 1px;
+	
+	background: #a9bbb1;
+}
+
+.copyright p a:hover::after {
+	background: #a7a294;
+}
+
+.copyright p a:active::after {
+	left: -10px;
+	
+	
+	background: #a7a294;
+}
+
+.copyright p a:hover,
+.copyright p a:active {
+	color: #ffbc9e;
 }
 
 
@@ -1361,6 +1550,8 @@ body > input[type="radio"] {
 
 
 
+
+
 .filters {
 	margin-bottom: 40px;
 }
@@ -1373,6 +1564,8 @@ body > input[type="radio"] {
 }
 
 .filter-container {
+	position: relative;
+	
 	display: inline-block;
 	margin-right: 16px;
 	
@@ -1502,6 +1695,39 @@ body > input[type="radio"] {
 	outline: none;
 	background: #aabab0;
 	color: white;
+	
+	width: 170px;
+	
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+/*Псевдоэлемент не дает счелкнуть по select (перекрывает его)*/
+.popularity-filter::after {
+	content: "";
+	position: absolute;
+	top: 42px;
+	right: 20px;
+	
+	/*width: 9px;
+	height: 9px;*/
+	
+	border: 6px solid transparent;
+	border-top: 6px solid #ffffff;
+}
+
+.popularity-filter:hover::after {
+	border-top: 6px solid #333333;
+}
+
+.popularity-filter:hover,
+.popularity-filter:hover select{
+	border: none;
+	outline: none;
+	background: #ffffff;
+	color: #323232;
 }
 
 .price-filter {
@@ -1540,6 +1766,20 @@ body > input[type="radio"] {
 
 .price-filter .toggle-min {
 	left: 39px;
+}
+
+.price-filter .toggle-min:hover {
+	top: 5px;
+	left: 38px;
+	
+	border: 1px solid #f8f7f4;
+}
+
+.price-filter .toggle-max:hover {
+	top: 5px;
+	left: 123px;
+	
+	border: 1px solid #f8f7f4;
 }
 
 .price-filter .toggle-max {
@@ -1653,10 +1893,13 @@ body > input[type="radio"] {
 	color: #323232;
 }
 
-/*Убрать фон при наведении*/
 .paginator .disabled {
 	opacity: 0.5;
 	cursor: default;
-	background-color: transparent;
+	background: none;
+}
+
+.paginator .disabled:hover {
+	background: none;
 }
 
