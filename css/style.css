@@ -75,6 +75,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: top center;
 	
+	-webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
 	transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -131,6 +132,7 @@ input[type="submit"] {
 	vertical-align: top;
 	font: 18px / 24px "Roboto Bold", Helvetica, sans-serif;
 	
+	background: -webkit-linear-gradient(top, #f16742, #e54a35);
 	background: linear-gradient(to bottom, #f16742, #e54a35);
 	border-radius: 20px;
 	color: white;
@@ -143,6 +145,7 @@ input[type="submit"] {
 
 .btn:hover,
 input[type="submit"]:hover {
+	background: -webkit-linear-gradient(top, #f58669, #ec6f5e);
 	background: linear-gradient(to bottom, #f58669, #ec6f5e);
 	color: white;
 	box-shadow: 0 2px 2px 0 #ac1000;
@@ -151,6 +154,7 @@ input[type="submit"]:hover {
 
 .btn:active,
 input[type="submit"]:active {
+	background: -webkit-linear-gradient(bottom, #e1613e, #d74632);
 	background: linear-gradient(to top, #e1613e, #d74632);
 	box-shadow: inset 0 2px 2px 0 #ac1000;
 	border: none;
@@ -286,7 +290,7 @@ input[type="submit"]:active {
 .main-navigation-item > a::after {
 	content: "";
 	position: absolute;
-	bottom: 5px;
+	bottom: 7px;
 	left: 13px;
 	right: 13px;
 	
@@ -418,7 +422,6 @@ input[type="submit"]:active {
 	height: 1px;
 	
 	background: #d1d0ce;
-	
 }
 
 
@@ -444,8 +447,9 @@ input[type="submit"]:active {
 	
 	background-color: #9db1a5;
 	background-repeat: no-repeat;
-	border-radius: 15px;
+	border-radius: 20px;
 	
+	-webkit-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
 }
 
@@ -600,7 +604,7 @@ input[type="submit"]:active {
 
 .user-block .bucket-empty-toggle,
 .user-block .bucket-full-toggle {
-	padding-right: 35px;
+	width: 73px;
 	
 	background-position: 16px center;
 	text-decoration: none;
@@ -646,13 +650,10 @@ input[type="submit"]:active {
 	border-bottom: 1px solid #ccccc9;
 }
 
-/*Как увеличить отступ от нижнего tr до границы таблицы?*/
-
 .bucket-form table td {
 	vertical-align: middle;
 	
 	cursor: default;
-	/*outline: 1px solid green;*/
 }
 
 .bucket-form .cell-1 {
@@ -719,11 +720,13 @@ input[type="submit"]:active {
 }
 
 .delete-from-bucket::before {
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .delete-from-bucket::after {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 
@@ -771,13 +774,12 @@ body > input[type="radio"] {
 }
 
 .slider {
-	padding-top: 270px;
+	padding-top: 287px;
 	margin-bottom: 40px;
 	
 	text-align: center;
 	
 	color: #ffffff;
-	/*background: url(../img/slider-icecream.png) no-repeat top center;*/
 }
 
 .slider-container {
@@ -791,33 +793,36 @@ body > input[type="radio"] {
 .slide-title {
 	width: 700px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+	margin-bottom: 32px;
 	
 	font: 60px / 60px "Roboto Black", Helvetica, sans-serif;
 }
 
 .slide-btn {
-	padding: 12px 50px;
+	padding: 8px 40px 12px;
 	
 	font: 32px / 44px "Roboto Bold", Helvetica, sans-serif;
 	font-size: 32px;
 	
 	background: #f26843;
+	background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
 	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border-radius: 100px;
 }
 
 .slide-btn:hover {
+	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
 	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
 }
 
 .slide-btn:active {
+	background: -webkit-linear-gradient(top, #d84327 0%, #e1613e 100%);
 	background: linear-gradient(to bottom, #d84327 0%, #e1613e 100%);
 }
 
 .slider-controls {
 	position: absolute;
-	bottom: 25px;
+	bottom: 21px;
 	left: 0;
 	z-index: 20;
 	
@@ -902,9 +907,8 @@ label[for="slider-btn-3"]:hover {
 
 
 .stock {
-	width: 520px;
-	padding: 23px 20px;
-	padding-top: 16px;
+	width: 521px;
+	padding: 15px 21px 21px 18px;
 	margin-bottom: 40px;
 	
 	font: 18px / 22px "Roboto Bold", Helvetica, sans-serif;
@@ -914,15 +918,15 @@ label[for="slider-btn-3"]:hover {
 
 .stock .btn {
 	float: right;
-	padding: 10px 22px;
+	padding: 10px 24px 12px 21px;
 	margin-top: 27px;
 	
-	border-radius: 20px;
+	border-radius: 25px;
 }
 
 .stock h2 {
 	margin-top: 0;
-	margin-bottom: 14px;
+	margin-bottom: 16px;
 	
 	cursor: default;
 }
@@ -943,8 +947,13 @@ label[for="slider-btn-3"]:hover {
 
 .chocolate {
 	float: right;
+	padding-bottom: 23px;
 	
 	background: #4c2612 url(../img/stock-chocolate.jpg) no-repeat;
+}
+
+.chocolate .btn {
+	padding: 9px 22px 12px 22px;
 }
 
 
@@ -979,7 +988,6 @@ label[for="slider-btn-3"]:hover {
 
 .product:hover p {
 	text-decoration: none;
-	
 }
 
 .products li {
@@ -993,7 +1001,7 @@ label[for="slider-btn-3"]:hover {
 .product-photo-container {
 	width: 267px;
 	height: 267px;
-	margin-bottom: 10px;
+	margin-bottom: 13px;
 	
 	border-radius: 50%;
 	overflow: hidden;
@@ -1003,7 +1011,7 @@ label[for="slider-btn-3"]:hover {
 
 .product-price {
 	position: absolute;
-	bottom: 60px;
+	bottom: 65px;
 	
 	font: 45px / 45px "Roboto Bold", Helvetica, sans-serif;
 	
@@ -1021,6 +1029,7 @@ label[for="slider-btn-3"]:hover {
 	text-align: center;
 	white-space: normal;
 	
+/*ПОДЧЕРКИВАНИЕ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	text-decoration: underline;
 	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
 	text-decoration-color: #9db1a5;
@@ -1066,7 +1075,7 @@ label[for="slider-btn-3"]:hover {
 
 .features-container {
 	margin-bottom: 40px;
-	padding: 10px 30px;
+	padding: 22px 32px 21px 20px;
 	
 	font: 16px / 22px "Roboto Regular", Helvetica, sans-serif;
 	
@@ -1076,20 +1085,26 @@ label[for="slider-btn-3"]:hover {
 }
 
 .features-title {
+	margin: 0;
+	
 	font: 24px / 30px "Roboto Medium", Helvetica, sans-serif;
 }
 
 .features-left-column {
 	float: left;
+	padding-top: 16px;
 }
 
 .features-right-column {
 	float: right;
+	padding-top: 16px;
 }
 
 .feature {
 	width: 470px;
-	padding-left: 70px;
+	padding-top: 6px;
+	padding-left: 58px;
+	margin-top: 0;
 	
 	font-family: "Roboto Regular", Helvetica, sans-serif;
 }
@@ -1099,19 +1114,19 @@ label[for="slider-btn-3"]:hover {
 }
 
 .feature-production {
-	background: url(../img/feature-icecream.png) no-repeat;
+	background: url(../img/feature-icecream.png) no-repeat 0 10px;
 }
 
 .feature-natural {
-	background: url(../img/feature-leaf.png) no-repeat;
+	background: url(../img/feature-leaf.png) no-repeat 0 10px;
 }
 
 .feature-cooperation {
-	background: url(../img/feature-cow.png) no-repeat;
+	background: url(../img/feature-cow.png) no-repeat 0 10px;
 }
 
 .feature-termopack {
-	background: url(../img/feature-thermometer.png) no-repeat;
+	background: url(../img/feature-thermometer.png) no-repeat 0 10px;
 }
 
 
@@ -1146,22 +1161,23 @@ label[for="slider-btn-3"]:hover {
 	font: 24px / 30px "Roboto Bold", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .blog a:hover,
 .blog a:active {
 	color: #e84d37;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 /*Как добавить подчеркивание на все 3 строки ссылки?*/
+/*ПОДЧЕРКИВАНИЕ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*
 .blog a::after {
 	content: "";
 	position: absolute;
 	bottom: -1px;
 	left: 0;
-	
 	
 	width: 100%;
 	height: 1px;
@@ -1178,6 +1194,7 @@ label[for="slider-btn-3"]:hover {
 	
 	background: #f9cdc4;
 }
+*/
 
 .subscribe {
 	float: right;
@@ -1330,11 +1347,13 @@ label[for="slider-btn-3"]:hover {
 }
 
 .close-feedback-form::before {
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .close-feedback-form::after {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 
@@ -1417,8 +1436,9 @@ label[for="slider-btn-3"]:hover {
 	list-style: none;
 	
 	font: 13px / 18px "Roboto Regular", Helvetica, sans-serif;
-	-moz-column-count: 2;
-	column-count: 2;
+	   -moz-column-count: 2;
+	-webkit-column-count: 2;
+	        column-count: 2;
 	text-align: left;
 }
 
@@ -1429,10 +1449,7 @@ label[for="slider-btn-3"]:hover {
 }
 
 .footer-menu li a {
-	
 	text-decoration: none;
-	
-	/*background: green;*/
 }
 
 .footer-menu li a::after {
@@ -1532,17 +1549,46 @@ label[for="slider-btn-3"]:hover {
 	padding: 0;
 	
 	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
-	column-count: 2;
+	-webkit-column-count: 2;
+	   -moz-column-count: 2;
+	        column-count: 2;
 }
 
 .breadcrumbs li {
+	position: relative;
+	
 	display: inline-block;
 	
 	vertical-align: top;
 }
 
+.breadcrumbs li a {
+	text-decoration: none;
+}
+
+.breadcrumbs li a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 10px;
+	
+	height: 1px;
+	
+	background: #a9bbb1;
+}
+
+.breadcrumbs li a:hover::after {
+	background: #a7a294;
+}
+
 .breadcrumbs li:last-child a {
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.breadcrumbs li:last-child a::after {
+	height: 0;
 }
 
 
@@ -1635,7 +1681,8 @@ label[for="slider-btn-3"]:hover {
 	height: 2px;
 	
 	background: #ffffff;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 	border-radius: 1px;
 }
 
@@ -1649,7 +1696,8 @@ label[for="slider-btn-3"]:hover {
 	height: 2px;
 	
 	background: #ffffff;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 	border-radius: 1px;
 }
 
@@ -1690,42 +1738,38 @@ label[for="slider-btn-3"]:hover {
 	background: #aabab0;
 }
 
+.popularity-filter {
+	padding: 0;
+}
+
 .popularity-filter select {
+	width: 190px;
+	height: 33px;
+	
+	padding-left: 20px;
+	padding-right: 20px;
+	
 	border: none;
+	border-radius: 20px;
 	outline: none;
-	background: #aabab0;
+	background: #a9b9af url(../img/select-arrow.svg) no-repeat 160px center;
 	color: white;
-	
-	width: 170px;
-	
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
-    text-overflow: '';
-}
-
-/*Псевдоэлемент не дает счелкнуть по select (перекрывает его)*/
-.popularity-filter::after {
-	content: "";
-	position: absolute;
-	top: 42px;
-	right: 20px;
-	
-	/*width: 9px;
-	height: 9px;*/
-	
-	border: 6px solid transparent;
-	border-top: 6px solid #ffffff;
-}
-
-.popularity-filter:hover::after {
-	border-top: 6px solid #333333;
+    text-overflow: "";
 }
 
 .popularity-filter:hover,
-.popularity-filter:hover select{
+.popularity-filter:hover select {
 	border: none;
 	outline: none;
+	background: #ffffff url(../img/select-arrow-hover.svg) no-repeat 160px center;
+	color: #323232;
+}
+
+.popularity-filter select option
+.popularity-filter:hover select option {
 	background: #ffffff;
 	color: #323232;
 }
@@ -1863,28 +1907,32 @@ label[for="slider-btn-3"]:hover {
 	top: 15px;
 	left: 7px;
 	
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .paginator .prev::before {
 	top: 9px;
 	left: 7px;
 	
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .paginator .next::after {
 	top: 9px;
 	right: 7px;
 	
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .paginator .next::before {
 	top: 15px;
 	right: 7px;
 	
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .paginator .current,
@@ -1902,4 +1950,3 @@ label[for="slider-btn-3"]:hover {
 .paginator .disabled:hover {
 	background: none;
 }
-
