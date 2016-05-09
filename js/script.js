@@ -94,7 +94,7 @@ loginOpen.addEventListener("mouseover", function () {
 		loginEmail.value = storageLoginEmail;
 		loginPassword.focus();
 	} else {
-		loginEmail.value();
+		loginEmail.focus();
 	}
 });
 
