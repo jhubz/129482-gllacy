@@ -355,9 +355,6 @@ input[type="submit"]:active {
 	display: block;
 }
 
-/*Пункт "Новинки" подчеркивание и padding*/
-
-/*Опустить подменю*/
 .main-navigation-catalog .sub-menu-container {
 	position: absolute;
 	top: 25px;
@@ -438,9 +435,28 @@ input[type="submit"]:active {
 	font: 14px / 16px "Roboto Medium", Helvetica, sans-serif;
 }
 
-.user-block .user-block-item {
-	display: inline-block;
+
+.user-block-form-container {
+	padding-top: 10px;
+}
+
+.user-block-item:hover .user-block-form-container {
+	display: block;
+}
+
+
+/*Новый*/
+.user-block-item > a {
+	position: relative;
+	
+	display: block;
 	padding: 7px 0 9px 44px;
+}
+
+.user-block .user-block-item {
+	position: relative;/**/
+	
+	display: inline-block;
 	margin-left: 5px;
 	
 	vertical-align: middle;
@@ -458,38 +474,26 @@ input[type="submit"]:active {
 	color: #333333;
 }
 
-/* Сделать, чтобы кнопка переключателя подсвечивалась, при наведени на форму
-.search-form:hover ~ .search-toggle {
-	background-color: #f7f6f3;
+.user-block .user-block-item:hover > a {
 	color: #333333;
 }
-*/
 
 .user-block .search-toggle {
-	padding: 16px;
-	
 	background-image: url(../img/search-icon.svg);
 	background-position: center;
+}
+
+.user-block .search-toggle > a {
+	padding: 16px;
 }
 
 .user-block .search-toggle:hover {
 	background-image: url(../img/search-icon-active.svg);
 }
 
-.user-block-form-container {
-	padding-top: 10px;
-}
-
-.user-block-item:hover + .user-block-form-container,
-.user-block .search-form-container:hover,
-.user-block .login-form-container:hover,
-.user-block .bucket-form-container:hover {
-	display: block;
-}
-
-.user-block-item + .user-block-form-container {
+.user-block-item .user-block-form-container {
 	position: absolute;
-	top: 32px;
+	top: 30px;
 	z-index: 30;
 }
 
@@ -498,9 +502,8 @@ input[type="submit"]:active {
 	border-radius: 5px;
 }
 
-/*Не подсвечивается кнопка поиска при наведении на форму*/
 .user-block .search-form-container {
-	left: -230px;
+	left: -235px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif; 
 }
@@ -530,9 +533,8 @@ input[type="submit"]:active {
 	background-position: 16px center;
 }
 
-/*Не подсвечивается кнопка входа при наведении на форму*/
 .user-block .login-form-container {
-	left: -170px;
+	left: -217px;
 	
 	width: 310px;
 	
@@ -604,7 +606,7 @@ input[type="submit"]:active {
 
 .user-block .bucket-empty-toggle,
 .user-block .bucket-full-toggle {
-	width: 73px;
+	width: 120px;
 	
 	background-position: 16px center;
 	text-decoration: none;
@@ -623,7 +625,7 @@ input[type="submit"]:active {
 }
 
 .user-block .bucket-form-container {
-	left: -235px;
+	left: -400px;
 	
 	width: 520px;
 	
@@ -700,10 +702,6 @@ input[type="submit"]:active {
 	border: 0;
 	cursor: pointer;
 	background-color: #f8f7f4;
-}
-
-.delete-from-bucket:focus {
-	outline: 0;
 }
 
 .delete-from-bucket::before,
@@ -1233,25 +1231,28 @@ label[for="slider-btn-3"]:hover {
 
 /*Вставить интерактивную карту*/
 .map {
-	height: 430px;
-		
+	height: 430px;	
+	
 	color: #323232;
-	background: url(../img/map.jpg) no-repeat;
-	background-size: 100%;
+}
+
+.map-container {
+	position: relative;
+	
+	/*width: 1200px;*/
+	width: 100%;
+	margin: 0 auto;
 }
 
 .contacts-container {
-	position: relative;
-	
-	width: 1146px;
-	height: 430px;
+	width: 1200px;
 	margin: 0 auto;
 }
 
 .map-contacts {
 	position: absolute;
 	top: 50px;
-	right: 0;
+	right: 27px;
 	
 	width: 250px;
 	padding: 30px 25px;

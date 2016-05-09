@@ -60,47 +60,98 @@
 						</ul>
 					</nav>
 
+					
 					<div class="user-block">
-						
-						<a class="search-toggle user-block-item" href="#"></a>
-						
-						<div class="search-form-container user-block-form-container hide">
-							<div class="search-form user-block-form">
+							<!--
+								<a class="search-toggle user-block-item" href="#"></a>
 
-								<form action="#" method="post">
-									<div class="field-container">
-										<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
-										<label class="hide" for="search-field">Что ищем&#63;</label>
+								<div class="search-form-container user-block-form-container hide">
+									<div class="search-form user-block-form">
+
+										<form action="#" method="post">
+											<div class="field-container">
+												<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+												<label class="hide" for="search-field">Что ищем&#63;</label>
+											</div>
+										</form>
+
 									</div>
-								</form>
+								</div>
+					
+								<a class="login-toggle user-block-item" href="#">Вход</a>
+
+								<div class="login-form-container user-block-form-container hide">
+									<div class="login-form user-block-form">
+
+										<form action="#" method="post">
+											<div class="field-container">
+												<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+												<label class="hide" for="login-email-field">Электронная почта</label>
+											</div>
+											<div class="field-container">
+												<input type="password" name="password" id="password-field" placeholder="Пароль">
+												<label class="hide" for="password-field">Пароль</label>
+											</div>
+											<a class="btn" href="#">Войти</a>
+
+											<a class="recover" href="#">Забыли пароль&#63;</a>
+											<a class="registration" href="#">Новая регистрация</a>
+										</form>
+
+									</div>
+								</div>
+						
+								<a class="bucket-empty-toggle user-block-item" href="#">Пусто</a>
+							-->
+						
+						<div class="search-toggle user-block-item">
 							
-							</div>
-						</div>
+							<a href="#"></a>
 
-						<a class="login-toggle user-block-item" href="#">Вход</a>
+							<div class="search-form-container user-block-form-container hide">
+								<div class="search-form user-block-form">
+
+									<form action="#" method="post">
+										<div class="field-container">
+											<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+											<label class="hide" for="search-field">Что ищем&#63;</label>
+										</div>
+									</form>
+
+								</div>
+							</div>
+							
+						</div>
 						
-						<div class="login-form-container user-block-form-container hide">
-							<div class="login-form user-block-form">
+						<div class="login-toggle user-block-item">
+							<a href="#">Вход</a>
 
-								<form action="#" method="post">
-									<div class="field-container">
-										<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
-										<label class="hide" for="login-email-field">Электронная почта</label>
-									</div>
-									<div class="field-container">
-										<input type="password" name="password" id="password-field" placeholder="Пароль">
-										<label class="hide" for="password-field">Пароль</label>
-									</div>
-									<a class="btn" href="#">Войти</a>
+							<div class="login-form-container user-block-form-container hide">
+								<div class="login-form user-block-form">
 
-									<a class="recover" href="#">Забыли пароль&#63;</a>
-									<a class="registration" href="#">Новая регистрация</a>
-								</form>
-								
+									<form action="#" method="post">
+										<div class="field-container">
+											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+											<label class="hide" for="login-email-field">Электронная почта</label>
+										</div>
+										<div class="field-container">
+											<input type="password" name="password" id="password-field" placeholder="Пароль">
+											<label class="hide" for="password-field">Пароль</label>
+										</div>
+										<a class="btn" href="#">Войти</a>
+
+										<a class="recover" href="#">Забыли пароль&#63;</a>
+										<a class="registration" href="#">Новая регистрация</a>
+									</form>
+
+								</div>
 							</div>
+							
 						</div>
-
-						<a class="bucket-empty-toggle user-block-item" href="#">Пусто</a>
+						
+						<div class="bucket-empty-toggle user-block-item">
+							<a href="#">Пусто</a>
+						</div>
 
 						<div class="header-contacts">
 							<p>
@@ -110,7 +161,7 @@
 								</div>
 							</p>
 						</div>
-
+		
 					</div>
 
 				</div>
@@ -325,32 +376,38 @@
 				</div>
 
 				<section class="map">
+					
+					<div class="map-container">
+						
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123607!2d30.32089461558455!3d59.93879686904853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462816448615" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-					<div class="contacts-container">	
+						<div class="contacts-container">
 
-						<div class="map-contacts">
+							<div class="map-contacts">
 
-							<p class="contact-address">
-								Адрес главного офиса и
-								оффлайн магазина: <br>
-								<span>
-									ул.Большая Конюшенная
-									19&#047;8, Санкт-Петербург
-								</span>
-							</p>
+								<p class="contact-address">
+									Адрес главного офиса и
+									оффлайн магазина: <br>
+									<span>
+										ул.Большая Конюшенная
+										19&#047;8, Санкт-Петербург
+									</span>
+								</p>
 
-							<p class="contact-telephone">
-								Для заказов по телефону: <br>
-								<span>
-									8 812 450-25-25
-								</span> <br>
-								&#040;с 10 до 20 ежедневно&#041;
-							</p>
+								<p class="contact-telephone">
+									Для заказов по телефону: <br>
+									<span>
+										8 812 450-25-25
+									</span> <br>
+									&#040;с 10 до 20 ежедневно&#041;
+								</p>
 
-							<a class="btn" href="#">Форма обратной связи</a>
+								<a class="btn" href="#">Форма обратной связи</a>
+
+							</div>
 
 						</div>
-
+					
 					</div>
 
 				</section>
@@ -416,6 +473,8 @@
 		
 		</div>
 		
+	<script src="js/script.js"></script>
+	
 	</body>
 	
 </html>
