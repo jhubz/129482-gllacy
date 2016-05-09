@@ -1237,16 +1237,16 @@ label[for="slider-btn-3"]:hover {
 }
 
 .map-container {
-	position: relative;
-	
-	/*width: 1200px;*/
 	width: 100%;
 	margin: 0 auto;
 }
 
 .contacts-container {
+	position: relative;
 	width: 1200px;
 	margin: 0 auto;
+	
+	background: green;
 }
 
 .map-contacts {
@@ -1270,6 +1270,11 @@ label[for="slider-btn-3"]:hover {
 .contact-telephone span {
 	font: 18px / 22px "Roboto Bold", Helvetica, sans-serif;
 }
+
+
+
+
+
 
 .feedback-form {
 	position: fixed;
