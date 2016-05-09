@@ -62,47 +62,6 @@
 
 					
 					<div class="user-block">
-							<!--
-								<a class="search-toggle user-block-item" href="#"></a>
-
-								<div class="search-form-container user-block-form-container hide">
-									<div class="search-form user-block-form">
-
-										<form action="#" method="post">
-											<div class="field-container">
-												<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
-												<label class="hide" for="search-field">Что ищем&#63;</label>
-											</div>
-										</form>
-
-									</div>
-								</div>
-					
-								<a class="login-toggle user-block-item" href="#">Вход</a>
-
-								<div class="login-form-container user-block-form-container hide">
-									<div class="login-form user-block-form">
-
-										<form action="#" method="post">
-											<div class="field-container">
-												<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
-												<label class="hide" for="login-email-field">Электронная почта</label>
-											</div>
-											<div class="field-container">
-												<input type="password" name="password" id="password-field" placeholder="Пароль">
-												<label class="hide" for="password-field">Пароль</label>
-											</div>
-											<a class="btn" href="#">Войти</a>
-
-											<a class="recover" href="#">Забыли пароль&#63;</a>
-											<a class="registration" href="#">Новая регистрация</a>
-										</form>
-
-									</div>
-								</div>
-						
-								<a class="bucket-empty-toggle user-block-item" href="#">Пусто</a>
-							-->
 						
 						<div class="search-toggle user-block-item">
 							
@@ -131,14 +90,14 @@
 
 									<form action="#" method="post">
 										<div class="field-container">
-											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
 											<label class="hide" for="login-email-field">Электронная почта</label>
 										</div>
 										<div class="field-container">
 											<input type="password" name="password" id="password-field" placeholder="Пароль">
 											<label class="hide" for="password-field">Пароль</label>
 										</div>
-										<a class="btn" href="#">Войти</a>
+										<input type="submit" value="Войти">
 
 										<a class="recover" href="#">Забыли пароль&#63;</a>
 										<a class="registration" href="#">Новая регистрация</a>
@@ -363,13 +322,15 @@
 							<p>
 								Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно &#061;&#041;
 							</p>
-							<form class="subscribe-form" action="#" method="post">
-								<div class="field-container">
-									<input type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта">
-									<label class="hide" for="subscribe-email-field">Электронная почта</label>
-								</div>
-								<input type="submit" value="Отправить">
-							</form>
+							<div class="subscribe-form">
+								<form action="#" method="post">
+									<div class="field-container">
+										<input type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта" required>
+										<label class="hide" for="subscribe-email-field">Электронная почта</label>
+									</div>
+									<input type="submit" value="Отправить">
+								</form>
+							</div>
 						</div>
 
 					</div>
@@ -449,11 +410,11 @@
 				</span>
 				<form action="#" method="post">
 					<div class="field-container">
-						<input type="text" name="name" id="name-field" placeholder="Как вас зовут&#63;">
+						<input type="text" name="name" id="name-field" placeholder="Как вас зовут&#63;" requared>
 						<label class="hide" for="name-field">Как вас зовут&#63;</label>
 					</div>
 					<div class="field-container">
-						<input type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа&#63;">
+						<input type="email" name="feedback-email" id="feedback-email-field" placeholder="Ваша почта для ответа&#63;" required>
 						<label class="hide" for="feedback-email-field">Ваша почта для ответа&#63;</label>
 					</div>
 					<div class="field-container">
@@ -473,7 +434,7 @@
 		
 		</div>
 		
-	<script src="js/script.js"></script>
+		<script src="js/script.js"></script>
 	
 	</body>
 	

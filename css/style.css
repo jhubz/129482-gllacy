@@ -201,6 +201,7 @@ input[type="submit"]:active {
 	left: 10px;
 	
 	font: 11px / 13px "Roboto Regular", Helvetica, sans-serif;
+	color: #a7a7a7;
 }
 
 .hide {
@@ -444,17 +445,16 @@ input[type="submit"]:active {
 	display: block;
 }
 
-
-/*Новый*/
 .user-block-item > a {
 	position: relative;
 	
 	display: block;
 	padding: 7px 0 9px 44px;
+	text-decoration: none;
 }
 
 .user-block .user-block-item {
-	position: relative;/**/
+	position: relative;
 	
 	display: inline-block;
 	margin-left: 5px;
@@ -526,9 +526,6 @@ input[type="submit"]:active {
 }
 
 .user-block .login-toggle:hover {
-	padding-right: 17px;
-	margin-left: 7px;
-	
 	background-image: url(../img/login-icon-active.svg);
 	background-position: 16px center;
 }
@@ -545,7 +542,7 @@ input[type="submit"]:active {
 	padding: 20px 20px;
 }
 
-.login-form input {
+.login-form .field-container input {
 	width: 239px;
 	margin-bottom: 20px;
 }
@@ -595,7 +592,7 @@ input[type="submit"]:active {
 	color: #e84d37;
 }
 
-.user-block .btn {
+.login-form form input[type="submit"] {
 	float: left;
 	padding: 10px 25px;
 	margin-right: 20px;
@@ -1343,6 +1340,7 @@ label[for="slider-btn-3"]:hover {
 .close-feedback-form::before,
 .close-feedback-form::after {
 	content: "";
+	position: absolute;
 	top: 20px;
 	right: 5px;
 	
