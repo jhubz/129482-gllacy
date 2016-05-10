@@ -72,7 +72,7 @@
 
 									<form action="#" method="post">
 										<div class="field-container">
-											<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;" autofocus requared>
+											<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;" required>
 											<label class="hide" for="search-field">Что ищем&#63;</label>
 										</div>
 									</form>
@@ -90,11 +90,11 @@
 
 									<form action="#" method="post">
 										<div class="field-container">
-											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" autofocus required>
+											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
 											<label class="hide" for="login-email-field">Электронная почта</label>
 										</div>
 										<div class="field-container">
-											<input type="password" name="password" id="password-field" placeholder="Пароль" requared>
+											<input type="password" name="password" id="password-field" placeholder="Пароль" required>
 											<label class="hide" for="password-field">Пароль</label>
 										</div>
 										<input type="submit" value="Войти">
@@ -278,7 +278,7 @@
 						<div class="features-container clearfix">
 
 							<p class="features-title">
-								Магазин Глейси &mdash; это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+								Магазин Глейси &nbsp;&mdash; это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
 							</p>
 
 							<div class="features-left-column">
@@ -310,12 +310,13 @@
 						<div class="blog">
 							<p>
 								Новое в нашем блоге<br>
-								<a href="#">
-									10 способов сервировки
-									фруктовых щербетов <br>
-									к столу
-								</a>
 							</p>
+							<a href="#">
+								10 способов сервировки
+								фруктовых щербетов <br>
+								к столу
+							</a>
+							
 						</div>
 
 						<div class="subscribe">
@@ -343,19 +344,21 @@
 							<div class="map-contacts">
 
 								<p class="contact-address">
-									Адрес главного офиса и
-									оффлайн магазина: <br>
-									<span>
-										ул.Большая Конюшенная
-										19&#047;8, Санкт-Петербург
-									</span>
+									Адрес главного офиса и <br>
+									офлайн магазина:
 								</p>
+								<span>
+									ул. Большая Конюшенная
+									19&#047;8, Санкт-Петербург
+								</span>
 
 								<p class="contact-telephone">
-									Для заказов по телефону: <br>
-									<span>
-										8 812 450-25-25
-									</span> <br>
+									Для заказов по телефону:
+								</p>
+								<span>
+									8 812 450-25-25
+								</span>
+								<p class="telephone">
 									&#040;с 10 до 20 ежедневно&#041;
 								</p>
 
@@ -410,7 +413,7 @@
 				</span>
 				<form action="#" method="post">
 					<div class="field-container">
-						<input type="text" name="name" id="name-field" placeholder="Как вас зовут&#63;" requared>
+						<input type="text" name="name" id="name-field" placeholder="Как вас зовут&#63;" required>
 						<label class="hide" for="name-field">Как вас зовут&#63;</label>
 					</div>
 					<div class="field-container">
@@ -418,7 +421,7 @@
 						<label class="hide" for="feedback-email-field">Ваша почта для ответа&#63;</label>
 					</div>
 					<div class="field-container">
-						<textarea name="feedback-text" id="feedback-text-field" rows="5" placeholder="Напишите что-нибудь&hellip;" requared></textarea>
+						<textarea name="feedback-text" id="feedback-text-field" rows="5" placeholder="Напишите что-нибудь&hellip;" required></textarea>
 						<!-- placeholder не работает -->
 						<label class="hide" for="feedback-text-field">Напишите что-нибудь&hellip;</label>
 					</div>

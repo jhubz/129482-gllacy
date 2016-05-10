@@ -97,6 +97,7 @@ body {
 
 h1 {
 	margin-top: 0;
+	padding-top: 14px;
 
 	font: 35px / 41px "Roboto Bold", Helvetica, sans-serif;
 
@@ -199,14 +200,13 @@ input[type="submit"]:active {
 	display: inline;
 	color: #8fbdec;
 }
-/*-------------------------------
-Как сделать, чтобы у заполненного поля был постоянный серый label??
+
 .field-container input:valid + label,
 .field-container textarea:valid + label {
 	display: inline;
-	color: red;
+	color: #a0a0a0;
 }
------------------------------------*/
+
 .field-container {
 	position: relative;
 }
@@ -234,6 +234,10 @@ input[type="submit"]:active {
 	width: 1146px;
 	margin: 0 auto;
 	padding: 0 27px;
+}
+
+.main {
+	position: relative;
 }
 
 .modal-overlay {
@@ -627,7 +631,7 @@ input[type="submit"]:active {
 
 .user-block .bucket-empty-toggle,
 .user-block .bucket-full-toggle {
-	width: 120px;
+	width: 117px;
 	
 	background-position: 16px center;
 	text-decoration: none;
@@ -931,7 +935,7 @@ label[for="slider-btn-3"]:hover {
 
 .stock {
 	width: 521px;
-	padding: 15px 21px 21px 18px;
+	padding: 15px 21px 22px 18px;
 	margin-bottom: 40px;
 	
 	font: 18px / 22px "Roboto Bold", Helvetica, sans-serif;
@@ -1036,7 +1040,7 @@ label[for="slider-btn-3"]:hover {
 
 .product-price {
 	position: absolute;
-	top: 215px;
+	top: 208px;
 	
 	font: 45px / 45px "Roboto Bold", Helvetica, sans-serif;
 	
@@ -1095,7 +1099,7 @@ label[for="slider-btn-3"]:hover {
 
 .features-container {
 	margin-bottom: 40px;
-	padding: 22px 32px 21px 20px;
+	padding: 22px 0 9px 20px;
 	
 	font: 16px / 22px "Roboto Regular", Helvetica, sans-serif;
 	
@@ -1121,12 +1125,21 @@ label[for="slider-btn-3"]:hover {
 }
 
 .feature {
-	width: 470px;
+	width: 480px;
 	padding-top: 6px;
-	padding-left: 58px;
+	padding-left: 57px;
 	margin-top: 0;
 	
 	font-family: "Roboto Regular", Helvetica, sans-serif;
+	
+	background: no-repeat 0 -6px;
+}
+
+.features-right-column .feature {
+	padding-left: 57px;
+	padding-right: 21px;
+	
+	width: 482px;
 }
 
 .feature p {
@@ -1134,19 +1147,19 @@ label[for="slider-btn-3"]:hover {
 }
 
 .feature-production {
-	background: url(../img/feature-icecream.png) no-repeat 0 10px;
+	background-image: url(../img/feature-icecream.png);
 }
 
 .feature-natural {
-	background: url(../img/feature-leaf.png) no-repeat 0 10px;
+	background-image: url(../img/feature-leaf.png);
 }
 
 .feature-cooperation {
-	background: url(../img/feature-cow.png) no-repeat 0 10px;
+	background-image: url(../img/feature-cow.png);
 }
 
 .feature-termopack {
-	background: url(../img/feature-thermometer.png) no-repeat 0 10px;
+	background-image: url(../img/feature-thermometer.png);
 }
 
 
@@ -1160,8 +1173,8 @@ label[for="slider-btn-3"]:hover {
 
 .blog {
 	float: left;
-	width: 520px;
-	padding: 0 20px;
+	width: 360px;
+	padding: 0 180px 82px 20px;
 	
 	border-radius: 15px;
 	background: white url(../img/blog.jpg) no-repeat;
@@ -1169,8 +1182,9 @@ label[for="slider-btn-3"]:hover {
 }
 
 .blog p {
-	width: 300px;
-	margin-bottom: 92px;
+
+	margin-top: 22px;
+	margin-bottom: 4px;
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 }
@@ -1181,41 +1195,18 @@ label[for="slider-btn-3"]:hover {
 	font: 24px / 30px "Roboto Bold", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration: none;
-	border-bottom: 1px solid #b2b2b2;
+	text-decoration: underline;
+	/*border-bottom: 1px solid #b2b2b2;*/
 }
 
 .blog a:hover,
 .blog a:active {
 	color: #e84d37;
-	border-color: #f9cdc4;
+	/*border-color: #f9cdc4;*/
 }
 
-/*Как добавить подчеркивание на все 3 строки ссылки?*/
-/*ПОДЧЕРКИВАНИЕ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/*
-.blog a::after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	
-	width: 100%;
-	height: 1px;
-	
-	background: #b2b2b2;
-}
 
-.blog a:hover::after {
-	background: #f9cdc4;
-}
 
-.blog a:active::after {
-	left: -10px;
-	
-	background: #f9cdc4;
-}
-*/
 
 .subscribe {
 	float: right;
@@ -1232,10 +1223,12 @@ label[for="slider-btn-3"]:hover {
 
 .subscribe p {
 	padding-right: 5px;
-	margin-bottom: 35px;
+	padding-left: 7px;
+	margin-bottom: 36px;
 }
 
 .subscribe-form {
+	padding-left: 6px;
 	margin-bottom: 39px;
 	
 	font: 16px / 24px "Roboto Regular", Helvetica, sans-serif;
@@ -1243,7 +1236,15 @@ label[for="slider-btn-3"]:hover {
 
 .subscribe-form input[type="email"] {
 	width: 326px;
+	padding: 9px 26px 10px 14px;
 	margin-right: 10px;
+	
+}
+
+.subscribe-form input[type="submit"] {
+	padding-left: 17px;
+    padding-top: 8px;
+	padding-right: 18px;
 }
 
 
@@ -1274,11 +1275,11 @@ label[for="slider-btn-3"]:hover {
 
 .map-contacts {
 	position: absolute;
-	top: 50px;
+	top: 62px;
 	right: 27px;
 	
-	width: 250px;
-	padding: 30px 25px;
+	width: 251px;
+	padding: 14px 25px 30px 26px;
 	
 	font: 14px / 20px "Roboto Regular", Helvetica, sans-serif;
 
@@ -1286,12 +1287,39 @@ label[for="slider-btn-3"]:hover {
 	border-radius: 15px;
 }
 
-.contact-address span {
+.map-contacts p {
+	margin: 0;
+}
+
+.map-contacts .contact-address {
+	margin-top: 14px;
+	margin-bottom: 1px;
+}
+
+.map-contacts .contact-telephone {
+	margin-top: 18px;
+	margin-bottom: 5px
+}
+
+.map-contacts .telephone {
+	margin-top: 2px;
+	margin-bottom: 25px;
+}
+
+.contact-address + span {
 	font: 18px / 24px "Roboto Bold", Helvetica, sans-serif;
 }
 
-.contact-telephone span {
+.contact-telephone + span {
 	font: 18px / 22px "Roboto Bold", Helvetica, sans-serif;
+}
+
+.map-contacts .btn {
+	/*padding-right: 27px;
+    padding-left: 27px;
+    padding-top: 8px;
+    padding-bottom: 13px;*/
+	padding: 8px 27px 13px 27px;
 }
 
 
@@ -1403,11 +1431,11 @@ label[for="slider-btn-3"]:hover {
 
 .footer-social .social-btn {
 	display: inline-block;
-	width: 30px;
-	height: 30px;
-	margin-right: 12px;
+	width: 31px;
+	height: 31px;
+	margin-right: 9px;
 	
-	vertical-align: top;
+	vertical-align: middle;
 	font-size: 0;
 	
 	border: 3px solid #c2cec7;
@@ -1431,7 +1459,7 @@ label[for="slider-btn-3"]:hover {
 .social-btn-fb:active,
 .social-btn-vk:active {
 	opacity: 0.8;
-	box-shadow: inset 0 2px 2px #9b9b9b;
+	box-shadow: inset 0 2px 2px 0 #9b9b9b;
 }
 
 .social-btn-inst {
@@ -1456,13 +1484,18 @@ label[for="slider-btn-3"]:hover {
 
 .footer-menu {
 	float: left;
-	padding-left: 150px;
-	margin-top: 20px;
+	padding-left: 206px;
+	margin-top: 32px;
 	
 	text-align: center;
 }
 
 .footer-menu ul {
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	width: 380px;
+	
 	list-style: none;
 	
 	font: 13px / 18px "Roboto Regular", Helvetica, sans-serif;
@@ -1470,6 +1503,16 @@ label[for="slider-btn-3"]:hover {
 	-webkit-column-count: 2;
 	        column-count: 2;
 	text-align: left;
+}
+
+.footer-menu li {
+	margin-bottom: 3px;
+	width: 182px;
+}
+
+.footer-menu li:nth-child(1),
+.footer-menu li:nth-child(2) 	{
+	width: 145px;
 }
 
 .footer-menu li a {
@@ -1525,13 +1568,14 @@ label[for="slider-btn-3"]:hover {
 
 .copyright {
 	float: right;
-	padding-top: 20px;
+	padding-top: 18px;
 	padding-bottom: 40px;
 }
 
 .copyright img {
 	width: 108px;
 	height: 37px;
+	padding-left: 2px;
 }
 
 .copyright p {
@@ -1581,6 +1625,12 @@ label[for="slider-btn-3"]:hover {
 
 
 
+.breadcrumbs {
+	position: absolute;
+	top: -5px;
+	left: 28px;
+}
+
 .breadcrumbs ul {
 	margin: 0;
 	padding: 0;
@@ -1607,9 +1657,10 @@ label[for="slider-btn-3"]:hover {
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: 0;
-	right: 10px;
+	bottom: 0px;
+	/*right: 10px;*/
 	
+	width: 100%;
 	height: 1px;
 	
 	background: #a9bbb1;
