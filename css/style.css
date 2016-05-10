@@ -1057,6 +1057,7 @@ label[for="slider-btn-3"]:hover {
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	white-space: normal;
+	line-height: 12px;
 	
 	border-bottom: 1px solid #adbdb4;
 }
@@ -1084,8 +1085,13 @@ label[for="slider-btn-3"]:hover {
 	
 	background: #9db1a5;
 	border-radius: 5px;
+	/*opacity: 0.9;*/
 }
-
+/*Как сделать кнопку непрозрачной?
+.product .hide-product-container a {
+	opacity: 1;
+}
+*/
 .product:hover .hide-product-container {
 	display: block;
 }
@@ -1265,6 +1271,13 @@ label[for="slider-btn-3"]:hover {
 	margin: 0 auto;
 }
 
+.map-container iframe {
+	width: 100%;
+	height: 430px;
+	
+	border: 0;
+}
+
 .contacts-container {
 	position: relative;
 	width: 1200px;
@@ -1272,6 +1285,8 @@ label[for="slider-btn-3"]:hover {
 	
 	background: green;
 }
+
+
 
 .map-contacts {
 	position: absolute;
@@ -1315,10 +1330,6 @@ label[for="slider-btn-3"]:hover {
 }
 
 .map-contacts .btn {
-	/*padding-right: 27px;
-    padding-left: 27px;
-    padding-top: 8px;
-    padding-bottom: 13px;*/
 	padding: 8px 27px 13px 27px;
 }
 
@@ -1493,26 +1504,25 @@ label[for="slider-btn-3"]:hover {
 .footer-menu ul {
 	padding: 0;
 	margin: 0;
-	height: 50px;
-	width: 380px;
+	/*height: 50px;*/
+	width: 370px;
 	
 	list-style: none;
 	
 	font: 13px / 18px "Roboto Regular", Helvetica, sans-serif;
-	   -moz-column-count: 2;
-	-webkit-column-count: 2;
-	        column-count: 2;
 	text-align: left;
 }
 
 .footer-menu li {
-	margin-bottom: 3px;
+	display: inline-block;
+	margin-bottom: 4px;
+	
 	width: 182px;
 }
 
 .footer-menu li:nth-child(1),
-.footer-menu li:nth-child(2) 	{
-	width: 145px;
+.footer-menu li:nth-child(3) 	{
+	width: 140px;
 }
 
 .footer-menu li a {
@@ -1636,9 +1646,6 @@ label[for="slider-btn-3"]:hover {
 	padding: 0;
 	
 	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
-	-webkit-column-count: 2;
-	   -moz-column-count: 2;
-	        column-count: 2;
 }
 
 .breadcrumbs li {
@@ -1647,6 +1654,14 @@ label[for="slider-btn-3"]:hover {
 	display: inline-block;
 	
 	vertical-align: top;
+}
+
+.breadcrumbs li::after {
+	content: "\00A0\00A0\00BB\00A0";
+}
+
+.breadcrumbs li:last-child::after {
+	content: "";
 }
 
 .breadcrumbs li a {
@@ -1658,15 +1673,15 @@ label[for="slider-btn-3"]:hover {
 	position: absolute;
 	left: 0;
 	bottom: 0px;
-	/*right: 10px;*/
+	right: 17px;
 	
-	width: 100%;
+	
 	height: 1px;
 	
 	background: #a9bbb1;
 }
 
-.breadcrumbs li a:hover::after {
+.breadcrumbs li:hover a::after {
 	background: #a7a294;
 }
 
@@ -1701,17 +1716,13 @@ label[for="slider-btn-3"]:hover {
 	position: relative;
 	
 	display: inline-block;
-	margin-right: 16px;
+	margin-right: 12px;
 	
 	vertical-align: bottom;
 }
 
-.filter-container:nth-child(2) {
-	width: 200px;
-}
-
 .filter {
-	padding: 5px 20px;
+	padding: 5px 16px 5px 20px;
 	margin-top: 5px;
 	
 	border-radius: 20px;
@@ -1729,12 +1740,18 @@ label[for="slider-btn-3"]:hover {
 	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
 }
 
+.fat-filter {
+    padding-top: 5px;
+    padding-left: 26px;
+    padding-bottom: 9px;
+}
+
 .fill-filter label,
 .fat-filter label {
 	position: relative;
 	
 	margin-left: 21px;
-	margin-right: 32px;
+    margin-right: 24px;
 }
 
 .fill-filter label:last-child,
@@ -1795,6 +1812,7 @@ label[for="slider-btn-3"]:hover {
 
 .filter label .radio-indicator {
 	position: absolute;
+	top: 2px;
 	left: -32px;
 	
 	width: 20px;
@@ -1835,11 +1853,7 @@ label[for="slider-btn-3"]:hover {
 }
 
 .popularity-filter select {
-	width: 200px;
-	height: 33px;
-	
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 9px 33px 9px 15px;
 	
 	border: none;
 	border-radius: 20px;
@@ -1875,8 +1889,8 @@ label[for="slider-btn-3"]:hover {
 .price-filter {
 	position: relative;
 	
-	padding: 14px 15px 5px 15px;
-	height: 14px;
+	width: 188px;
+	padding: 16px 15px 16px 15px;
 }
 
 .price-filter .scale {
@@ -1907,25 +1921,27 @@ label[for="slider-btn-3"]:hover {
 }
 
 .price-filter .toggle-min {
-	left: 39px;
+	top: 8px;
+	left: 43px;
 }
 
 .price-filter .toggle-min:hover {
-	top: 5px;
-	left: 38px;
-	
-	border: 1px solid #f8f7f4;
-}
-
-.price-filter .toggle-max:hover {
-	top: 5px;
-	left: 123px;
+	top: 7px;
+	left: 42px;
 	
 	border: 1px solid #f8f7f4;
 }
 
 .price-filter .toggle-max {
-	left: 124px;
+	top: 8px;
+	left: 136px;
+}
+
+.price-filter .toggle-max:hover {
+	top: 7px;
+	left: 135px;
+	
+	border: 1px solid #f8f7f4;
 }
 
 .filter .filter-submit {
