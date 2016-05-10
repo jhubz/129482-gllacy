@@ -76,7 +76,7 @@ body {
 	background-position: top center;
 	
 	-webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-	transition: background-image 0.5s ease, background-color 0.5s ease;
+	transition: background-image 0,5s ease, background-color 0,5s ease;
 }
 
 .body-content::before,
@@ -179,12 +179,34 @@ input[type="submit"]:active {
 	outline: none;
 }
 
+.field-container input:focus::-webkit-input-placeholder,
+.field-container textarea:focus::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+.field-container input:focus::-moz-placeholder,
+.field-container textarea:focus::-moz-placeholder {
+	color: #ffffff;
+}
+
+.field-container input:focus:-ms-input-placeholder,
+.field-container textarea:focus:-ms-input-placeholder {
+	color: #ffffff;
+}
+
 .field-container input:focus + label,
 .field-container textarea:focus + label {
 	display: inline;
 	color: #8fbdec;
 }
-
+/*-------------------------------
+Как сделать, чтобы у заполненного поля был постоянный серый label??
+.field-container input:valid + label,
+.field-container textarea:valid + label {
+	display: inline;
+	color: red;
+}
+-----------------------------------*/
 .field-container {
 	position: relative;
 }
@@ -407,7 +429,6 @@ input[type="submit"]:active {
 	
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	/*border-bottom: 1px solid #d1d0ce;*/
 }
 
 .sub-menu .sub-menu-header:after {
@@ -557,15 +578,16 @@ input[type="submit"]:active {
 	
 	color: #323232;
 	text-decoration: none;
+	border-bottom: 1px solid #b2b2b2;
 }
 
+/*
 .login-form .recover::after,
 .login-form .registration::after {
 	content: "";
 	position: absolute;
-	bottom: -2px;
+	bottom: -1px;
 	left: 0;
-	
 	
 	width: 100%;
 	height: 1px;
@@ -584,12 +606,14 @@ input[type="submit"]:active {
 	
 	background: #f9cdc4;
 }
+*/
 
 .login-form .recover:hover,
 .login-form .registration:hover,
 .login-form .recover:active,
 .login-form .registration:active {
 	color: #e84d37;
+	border-color: #f9cdc4;
 }
 
 .login-form form input[type="submit"] {
@@ -874,6 +898,10 @@ body > input[type="radio"] {
 	background-image: url(../img/slide-2.png);
 }
 
+#slider-btn-2:checked ~ .body-content .product .hide-product-container {
+	background: #89a69f;
+}
+
 #slider-btn-3:checked ~ .body-content {
 	background-color: #9d8b84;
 	background-image: url(../img/slide-3.png);
@@ -975,6 +1003,8 @@ label[for="slider-btn-3"]:hover {
 	float: left;
 	width: 267px;
 	margin-right: 26px;
+	
+	text-align: center;
 }
 
 .product:hover {
@@ -982,7 +1012,7 @@ label[for="slider-btn-3"]:hover {
 }
 
 .product:hover p {
-	text-decoration: none;
+	border: none;
 }
 
 .products li {
@@ -1006,7 +1036,7 @@ label[for="slider-btn-3"]:hover {
 
 .product-price {
 	position: absolute;
-	bottom: 65px;
+	top: 215px;
 	
 	font: 45px / 45px "Roboto Bold", Helvetica, sans-serif;
 	
@@ -1018,18 +1048,13 @@ label[for="slider-btn-3"]:hover {
 }
 
 .product p {
+	display: inline;
 	margin: 0;
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
-	text-align: center;
 	white-space: normal;
 	
-/*ПОДЧЕРКИВАНИЕ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-	text-decoration: underline;
-	-webkit-text-decoration-color: #9db1a5; /*Не работает в Chrome*/
-	text-decoration-color: #9db1a5;
-	/*Добавить отступ подчеркивания от текста*/
-	cursor: default;
+	border-bottom: 1px solid #adbdb4;
 }
 
 .hit-container {
@@ -1156,13 +1181,14 @@ label[for="slider-btn-3"]:hover {
 	font: 24px / 30px "Roboto Bold", Helvetica, sans-serif;
 	
 	color: #323232;
-	text-decoration: underline;
+	text-decoration: none;
+	border-bottom: 1px solid #b2b2b2;
 }
 
 .blog a:hover,
 .blog a:active {
 	color: #e84d37;
-	text-decoration: underline;
+	border-color: #f9cdc4;
 }
 
 /*Как добавить подчеркивание на все 3 строки ссылки?*/
@@ -1449,13 +1475,15 @@ label[for="slider-btn-3"]:hover {
 .footer-menu li a {
 	position: relative;
 	
-	padding-left: 20px;
+	margin-left: 20px;
 }
 
 .footer-menu li a {
 	text-decoration: none;
+	border-bottom: 1px solid #a9bbb1;
 }
 
+/*
 .footer-menu li a::after {
 	content: "";
 	position: absolute;
@@ -1478,10 +1506,12 @@ label[for="slider-btn-3"]:hover {
 	
 	background: #a7a294;
 }
+*/
 
 .footer-menu li a:hover,
 .footer-menu li a:active {
 	color: #ffbc9e;
+	border-color: #a7a294;
 }
 
 .footer-menu .for-providers {
@@ -1512,9 +1542,11 @@ label[for="slider-btn-3"]:hover {
 
 .copyright p a {
 	position: relative;
+	
 	text-decoration: none;
+	border-bottom: 1px solid #a9bbb1;
 }
-
+/*
 .copyright p a::after {
 	content: "";
 	position: absolute;
@@ -1534,13 +1566,14 @@ label[for="slider-btn-3"]:hover {
 .copyright p a:active::after {
 	left: -10px;
 	
-	
 	background: #a7a294;
 }
+*/
 
 .copyright p a:hover,
 .copyright p a:active {
 	color: #ffbc9e;
+	border-color: #a7a294;
 }
 
 
@@ -1639,6 +1672,10 @@ label[for="slider-btn-3"]:hover {
 	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
 	
 	cursor: pointer;
+}
+
+.filter select option {
+	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
 }
 
 .fill-filter label,
@@ -1747,7 +1784,7 @@ label[for="slider-btn-3"]:hover {
 }
 
 .popularity-filter select {
-	width: 190px;
+	width: 200px;
 	height: 33px;
 	
 	padding-left: 20px;
@@ -1756,24 +1793,30 @@ label[for="slider-btn-3"]:hover {
 	border: none;
 	border-radius: 20px;
 	outline: none;
-	background: #a9b9af url(../img/select-arrow.svg) no-repeat 160px center;
+	background: #a9b9af url(../img/select-arrow.svg) no-repeat 170px center;
 	color: white;
     -webkit-appearance: none;
     -moz-appearance: none;
-    text-indent: 1px;
+    text-indent: 0.01px;
     text-overflow: "";
+}
+
+.popularity-filter select::-ms-expand {
+	display: none;
 }
 
 .popularity-filter:hover,
 .popularity-filter:hover select {
 	border: none;
 	outline: none;
-	background: #ffffff url(../img/select-arrow-hover.svg) no-repeat 160px center;
+	background-color: #ffffff;
+	background-image: url(../img/select-arrow-hover.svg);
 	color: #323232;
 }
 
 .popularity-filter select option
-.popularity-filter:hover select option {
+.popularity-filter:hover select option,
+.popularity-filter select option:hover {
 	background: #ffffff;
 	color: #323232;
 }

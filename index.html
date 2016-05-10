@@ -72,7 +72,7 @@
 
 									<form action="#" method="post">
 										<div class="field-container">
-											<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+											<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;" autofocus requared>
 											<label class="hide" for="search-field">Что ищем&#63;</label>
 										</div>
 									</form>
@@ -90,11 +90,11 @@
 
 									<form action="#" method="post">
 										<div class="field-container">
-											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
+											<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" autofocus required>
 											<label class="hide" for="login-email-field">Электронная почта</label>
 										</div>
 										<div class="field-container">
-											<input type="password" name="password" id="password-field" placeholder="Пароль">
+											<input type="password" name="password" id="password-field" placeholder="Пароль" requared>
 											<label class="hide" for="password-field">Пароль</label>
 										</div>
 										<input type="submit" value="Войти">
@@ -418,9 +418,7 @@
 						<label class="hide" for="feedback-email-field">Ваша почта для ответа&#63;</label>
 					</div>
 					<div class="field-container">
-						<textarea name="feedback-text" id="feedback-text-field" rows="5" placeholder="Напишите что-нибудь&hellip;">
-
-						</textarea>
+						<textarea name="feedback-text" id="feedback-text-field" rows="5" placeholder="Напишите что-нибудь&hellip;" requared></textarea>
 						<!-- placeholder не работает -->
 						<label class="hide" for="feedback-text-field">Напишите что-нибудь&hellip;</label>
 					</div>

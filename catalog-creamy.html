@@ -67,7 +67,7 @@
 
 								<form action="#" method="post">
 									<div class="field-container">
-										<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;">
+										<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;" required>
 										<label class="hide" for="search-field">Что ищем&#63;</label>
 									</div>
 								</form>
@@ -85,11 +85,11 @@
 
 								<form action="#" method="post">
 									<div class="field-container">
-										<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта">
+										<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
 										<label class="hide" for="login-email-field">Электронная почта</label>
 									</div>
 									<div class="field-container">
-										<input type="password" name="password" id="password-field" placeholder="Пароль">
+										<input type="password" name="password" id="password-field" placeholder="Пароль" required>
 										<label class="hide" for="password-field">Пароль</label>
 									</div>
 									<input type="submit" value="Войти">
@@ -201,10 +201,11 @@
 				<div class="filter-container">
 					<label for="sort">Сортировка:</label>
 					<div class="filter popularity-filter">
-						<select name="sort" id="sort">
+						<select name="sort" id="sort" unselectable="on">
 							<option value="popularity" selected>по популярности</option>
-							<option value="popularity2">по популярности</option>
-							<option value="popularity3">по популярности</option>
+							<option value="cheap">сначала недорогие</option>
+							<option value="expensive">сначала дорогие</option>
+							<option value="fat">по жирности</option>
 						</select>
 					</div>
 				</div>
