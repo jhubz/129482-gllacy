@@ -1,5 +1,3 @@
-/*На странице каталога не работает, потому что не может найти форму обратной связи...*/
-
 var feedbackOpen = document.querySelector(".map-contacts .btn");
 var feedback = document.querySelector(".feedback-form");
 var searchOpen = document.querySelector(".search-toggle > a");
@@ -22,14 +20,23 @@ var loginPassword = loginForm.querySelector("[name=password]");
 var subscribeForm = document.querySelector(".subscribe-form form");
 var subscribeEmail = subscribeForm.querySelector("[name=subscribe-email]");
 
-var storageFeedbackName = localStorage.getItem("storageFeedbackName");
-var storageFeedbackEmail = localStorage.getItem("storageFeedbackEmail");
-var storageLoginEmail = localStorage.getItem("storageLoginEmail");
+try {
+	var storageFeedbackName = localStorage.getItem("storageFeedbackName");
+} catch (err) {
+	
+}
 
-/*Под вопросом*/
-var label = document.querySelectorAll(".field-container label");
-var input = document.querySelectorAll(".field-container input");
-/*Под вопросом*/
+try {
+	var storageFeedbackEmail = localStorage.getItem("storageFeedbackEmail");
+} catch (err) {
+	
+}
+
+try {
+	var storageLoginEmail = localStorage.getItem("storageLoginEmail");
+} catch (err) {
+	
+}
 
 feedbackOpen.addEventListener("click", function (event) {
 	event.preventDefault();
@@ -85,6 +92,12 @@ window.addEventListener("keydown", function (event) {
 	}
 });
 
+modalOverlay.addEventListener("click", function (event) {
+	event.preventDefault();
+	feedback.classList.add("hide");
+	modalOverlay.classList.add("hide");
+});
+
 searchOpen.addEventListener("mouseover", function () {
 	searchSearch.focus();
 });
@@ -113,16 +126,3 @@ subscribeForm.addEventListener("submit", function (event) {
 		/*Трясучка*/
 	}
 });
-
-
-
-/*Как связать отдельный input с отдельным label?*/
-/*Обработать циклом??*/
-/*
-	Не получится ли то, что они будут отображаться, когда ВСЕ input буду заполнены?
-*/
-/*
-if (input) {
-	label.classList.remove("hide");
-}
-*/

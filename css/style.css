@@ -7,7 +7,6 @@
          url("../fonts/roboto-black-webfont.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -19,7 +18,6 @@
          url("../fonts/roboto-bold-webfont.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -31,7 +29,6 @@
          url("../fonts/roboto-medium-webfont.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -45,16 +42,7 @@
     font-style: normal;
 }
 
-
-
-
-
-
-/*
-	СЛАЙДЕР:
-	СОСТОЯНИЕ ССЫЛОК (ПРИ НАВЕДЕНИИ) ПРИ 2-ОМ И 3-ЕМ СЛАЙДЕ?
-*/
-
+/*------------------Основные стили----------------------*/
 
 html {
 	padding: 0;
@@ -198,12 +186,14 @@ input[type="submit"]:active {
 .field-container input:focus + label,
 .field-container textarea:focus + label {
 	display: inline;
+	
 	color: #8fbdec;
 }
 
 .field-container input:valid + label,
 .field-container textarea:valid + label {
 	display: inline;
+	
 	color: #a0a0a0;
 }
 
@@ -223,6 +213,7 @@ input[type="submit"]:active {
 	left: 10px;
 	
 	font: 11px / 13px "Roboto Regular", Helvetica, sans-serif;
+	
 	color: #a7a7a7;
 }
 
@@ -252,15 +243,7 @@ input[type="submit"]:active {
 	background: rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
-
-
-
-
-
+/*------------------Шапка сайта----------------------*/
 
 .main-header {
 	padding-top: 9px;
@@ -273,9 +256,6 @@ input[type="submit"]:active {
 	height: 64px;
 	margin-left: -6px;
 }
-
-
-
 
 .main-navigation {
 	position: relative;
@@ -310,7 +290,6 @@ input[type="submit"]:active {
 	padding: 4px 13px 6px 13px;
 
 	text-decoration: none;
-	
 	border-radius: 15px;
 }
 
@@ -369,10 +348,7 @@ input[type="submit"]:active {
 	color: white;
 }
 
-
-
-
-
+/*------------------Шапка сайта: подменю----------------------*/
 
 .sub-menu-container {
 	padding-top: 10px;
@@ -447,10 +423,7 @@ input[type="submit"]:active {
 	background: #d1d0ce;
 }
 
-
-
-
-
+/*------------------Блок пользователя----------------------*/
 
 .user-block {
 	position: relative;
@@ -460,7 +433,6 @@ input[type="submit"]:active {
 	
 	font: 14px / 16px "Roboto Medium", Helvetica, sans-serif;
 }
-
 
 .user-block-form-container {
 	padding-top: 10px;
@@ -475,6 +447,7 @@ input[type="submit"]:active {
 	
 	display: block;
 	padding: 7px 0 9px 44px;
+	
 	text-decoration: none;
 }
 
@@ -502,6 +475,8 @@ input[type="submit"]:active {
 .user-block .user-block-item:hover > a {
 	color: #333333;
 }
+
+/*------------------Блок пользователя: поиск----------------------*/
 
 .user-block .search-toggle {
 	background-image: url(../img/search-icon.svg);
@@ -540,6 +515,8 @@ input[type="submit"]:active {
 .search-form input {
 	width: 239px;
 }
+
+/*------------------Блок пользователя: вход----------------------*/
 
 .user-block .login-toggle {
 	padding-right: 17px;
@@ -585,33 +562,6 @@ input[type="submit"]:active {
 	border-bottom: 1px solid #b2b2b2;
 }
 
-/*
-.login-form .recover::after,
-.login-form .registration::after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	
-	width: 100%;
-	height: 1px;
-	
-	background: #b2b2b2;
-}
-
-.login-form .recover:hover::after,
-.login-form .registration:hover::after {
-	background: #f9cdc4;
-}
-
-.login-form .recover:active::after,
-.login-form .registration:active::after {
-	left: -10px;
-	
-	background: #f9cdc4;
-}
-*/
-
 .login-form .recover:hover,
 .login-form .registration:hover,
 .login-form .recover:active,
@@ -628,6 +578,8 @@ input[type="submit"]:active {
 	border-radius: 15px;
 	color: #fefefe;
 }
+
+/*------------------Блок пользователя: корзина----------------------*/
 
 .user-block .bucket-empty-toggle,
 .user-block .bucket-full-toggle {
@@ -670,7 +622,6 @@ input[type="submit"]:active {
 
 .bucket-form table {
 	margin-bottom: 10px;
-	
 	padding-bottom: 5px;
 	
 	border-spacing: 10px;
@@ -738,6 +689,7 @@ input[type="submit"]:active {
 	
 	width: 14px;
 	height: 1px;
+	
 	background-color: #323232;
 	border-radius: 1px;
 }
@@ -752,11 +704,7 @@ input[type="submit"]:active {
 	        transform: rotate(-45deg);
 }
 
-
-
-
-
-
+/*------------------Блок пользователя: контакты----------------------*/
 
 .header-contacts {
 	position: absolute;
@@ -782,15 +730,7 @@ input[type="submit"]:active {
 	cursor: default;
 }
 
-
-
-
-
-
-
-
-
-
+/*------------------Слайдер----------------------*/
 
 body > input[type="radio"] {
 	display: none;
@@ -867,53 +807,53 @@ body > input[type="radio"] {
 	outline: none;
 }
 
-#slider-btn-1:checked ~ .body-content #slide-1,
-#slider-btn-2:checked ~ .body-content #slide-2,
-#slider-btn-3:checked ~ .body-content #slide-3 {
+.slider-btn-1-class:checked ~ .body-content .slide-1,
+.slider-btn-2-class:checked ~ .body-content .slide-2,
+.slider-btn-3-class:checked ~ .body-content .slide-3 {
 	display: block;
 }
 
-#slider-btn-1:checked ~ .body-content {
+.slider-btn-1-class:checked ~ .body-content {
 	background-color: #849d8f;
 	background-image: url(../img/slide-1.png);
 }
 
-#slider-btn-1:checked ~ .body-content .user-block-item {
+.slider-btn-1-class:checked ~ .body-content .user-block-item {
 	background-color: #9db1a5;
 }
 
-#slider-btn-2:checked ~ .body-content .user-block-item {
+.slider-btn-2-class:checked ~ .body-content .user-block-item {
 	background-color: #a5b0bd;
 }
 
-#slider-btn-3:checked ~ .body-content .user-block-item {
+.slider-btn-3-class:checked ~ .body-content .user-block-item {
 	background-color: #bcada7;
 }
 
-#slider-btn-1:checked ~ .body-content .user-block-item:hover,
-#slider-btn-2:checked ~ .body-content .user-block-item:hover,
-#slider-btn-3:checked ~ .body-content .user-block-item:hover {
+.slider-btn-1-class:checked ~ .body-content .user-block-item:hover,
+.slider-btn-2-class:checked ~ .body-content .user-block-item:hover,
+.slider-btn-3-class:checked ~ .body-content .user-block-item:hover {
 	background-color: #f7f6f3;
 	color: #333333;
 }
 
-#slider-btn-2:checked ~ .body-content {
+.slider-btn-2-class:checked ~ .body-content {
 	background-color: #8996a6;
 	background-image: url(../img/slide-2.png);
 }
 
-#slider-btn-2:checked ~ .body-content .product .hide-product-container {
+.slider-btn-2-class:checked ~ .body-content .product .hide-product-container {
 	background: #89a69f;
 }
 
-#slider-btn-3:checked ~ .body-content {
+.slider-btn-3-class:checked ~ .body-content {
 	background-color: #9d8b84;
 	background-image: url(../img/slide-3.png);
 }
 
-#slider-btn-1:checked ~ .body-content label[for="slider-btn-1"],
-#slider-btn-2:checked ~ .body-content label[for="slider-btn-2"],
-#slider-btn-3:checked ~ .body-content label[for="slider-btn-3"] {
+.slider-btn-1-class:checked ~ .body-content label[for="slider-btn-1"],
+.slider-btn-2-class:checked ~ .body-content label[for="slider-btn-2"],
+.slider-btn-3-class:checked ~ .body-content label[for="slider-btn-3"] {
 	background-color: #ffffff;
 }
 
@@ -923,15 +863,7 @@ label[for="slider-btn-3"]:hover {
 	background-color: #b2c1b7;
 }
 
-
-
-
-
-
-
-
-
-
+/*------------------Блок акций----------------------*/
 
 .stock {
 	width: 521px;
@@ -983,12 +915,7 @@ label[for="slider-btn-3"]:hover {
 	padding: 9px 22px 12px 22px;
 }
 
-
-
-
-
-
-
+/*------------------Блок продукции----------------------*/
 
 .products {
 	margin-bottom: 40px;
@@ -1034,7 +961,6 @@ label[for="slider-btn-3"]:hover {
 	
 	border-radius: 50%;
 	overflow: hidden;
-	
 	background: green;
 }
 
@@ -1057,9 +983,12 @@ label[for="slider-btn-3"]:hover {
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	white-space: normal;
-	line-height: 12px;
+	/*cделать подчеркивание выше-------------------------------------------------------------------------------------------*/
+	font-size: 14px;
+	line-height: 10px;
 	
 	border-bottom: 1px solid #adbdb4;
+	background: green;
 }
 
 .hit-container {
@@ -1083,25 +1012,15 @@ label[for="slider-btn-3"]:hover {
 	
 	text-align: center;
 	
-	background: #9db1a5;
+	background: rgba(157, 177, 165, 0.5);
 	border-radius: 5px;
-	/*opacity: 0.9;*/
 }
-/*Как сделать кнопку непрозрачной?
-.product .hide-product-container a {
-	opacity: 1;
-}
-*/
+
 .product:hover .hide-product-container {
 	display: block;
 }
 
-
-
-
-
-
-
+/*------------------Блок преимуществ----------------------*/
 
 .features-container {
 	margin-bottom: 40px;
@@ -1144,7 +1063,6 @@ label[for="slider-btn-3"]:hover {
 .features-right-column .feature {
 	padding-left: 57px;
 	padding-right: 21px;
-	
 	width: 482px;
 }
 
@@ -1168,10 +1086,7 @@ label[for="slider-btn-3"]:hover {
 	background-image: url(../img/feature-thermometer.png);
 }
 
-
-
-
-
+/*------------------Блок дополнительных опций----------------------*/
 
 .advanced-options {
 	margin-bottom: 40px;
@@ -1188,7 +1103,6 @@ label[for="slider-btn-3"]:hover {
 }
 
 .blog p {
-
 	margin-top: 22px;
 	margin-bottom: 4px;
 	
@@ -1202,17 +1116,12 @@ label[for="slider-btn-3"]:hover {
 	
 	color: #323232;
 	text-decoration: underline;
-	/*border-bottom: 1px solid #b2b2b2;*/
 }
 
 .blog a:hover,
 .blog a:active {
 	color: #e84d37;
-	/*border-color: #f9cdc4;*/
 }
-
-
-
 
 .subscribe {
 	float: right;
@@ -1253,13 +1162,8 @@ label[for="slider-btn-3"]:hover {
 	padding-right: 18px;
 }
 
+/*------------------Блок карты----------------------*/
 
-
-
-
-
-
-/*Вставить интерактивную карту*/
 .map {
 	height: 430px;	
 	
@@ -1282,11 +1186,7 @@ label[for="slider-btn-3"]:hover {
 	position: relative;
 	width: 1200px;
 	margin: 0 auto;
-	
-	background: green;
 }
-
-
 
 .map-contacts {
 	position: absolute;
@@ -1333,18 +1233,16 @@ label[for="slider-btn-3"]:hover {
 	padding: 8px 27px 13px 27px;
 }
 
-
-
-
-
+/*------------------Форма обратной связи----------------------*/
 
 .feedback-form {
 	position: fixed;
-	top: 300px;
+	top: 50%;
 	left: 50%;
 	z-index: 100;
 	
-	margin-left: -260px; /*Подправить*/
+	margin-top: -215px;
+	margin-left: -260px;
 	padding: 15px 25px 5px;
 	width: 477px;
 	
@@ -1362,6 +1260,7 @@ label[for="slider-btn-3"]:hover {
 	position: relative;
 	
 	margin-top: 20px;
+	
 	font: 16px / 24px "Roboto Regular", Helvetica, sans-serif;
 }
 
@@ -1411,6 +1310,7 @@ label[for="slider-btn-3"]:hover {
 	
 	width: 30px;
 	height: 4px;
+
 	background-color: #323232;
 	border-radius: 1px;
 }
@@ -1425,15 +1325,7 @@ label[for="slider-btn-3"]:hover {
 	        transform: rotate(-45deg);
 }
 
-
-
-
-
-
-
-
-
-
+/*------------------Подвал сайта----------------------*/
 
 .footer-social {
 	float: left;
@@ -1488,11 +1380,6 @@ label[for="slider-btn-3"]:hover {
 	opacity: 0.7;
 }
 
-
-
-
-
-
 .footer-menu {
 	float: left;
 	padding-left: 206px;
@@ -1504,19 +1391,17 @@ label[for="slider-btn-3"]:hover {
 .footer-menu ul {
 	padding: 0;
 	margin: 0;
-	/*height: 50px;*/
 	width: 370px;
-	
-	list-style: none;
 	
 	font: 13px / 18px "Roboto Regular", Helvetica, sans-serif;
 	text-align: left;
+	
+	list-style: none;
 }
 
 .footer-menu li {
 	display: inline-block;
 	margin-bottom: 4px;
-	
 	width: 182px;
 }
 
@@ -1536,31 +1421,6 @@ label[for="slider-btn-3"]:hover {
 	border-bottom: 1px solid #a9bbb1;
 }
 
-/*
-.footer-menu li a::after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 20px;
-	right: 0;
-	
-	height: 1px;
-	
-	background: #a9bbb1;
-}
-
-.footer-menu li a:hover::after {
-	background: #a7a294;
-}
-
-.footer-menu li a:active::after {
-	left: 10px;
-	right: 10px;
-	
-	background: #a7a294;
-}
-*/
-
 .footer-menu li a:hover,
 .footer-menu li a:active {
 	color: #ffbc9e;
@@ -1572,9 +1432,6 @@ label[for="slider-btn-3"]:hover {
 	
 	background: url(../img/heart.svg) no-repeat 0 center;
 }
-
-
-
 
 .copyright {
 	float: right;
@@ -1600,29 +1457,6 @@ label[for="slider-btn-3"]:hover {
 	text-decoration: none;
 	border-bottom: 1px solid #a9bbb1;
 }
-/*
-.copyright p a::after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	
-	width: 100%;
-	height: 1px;
-	
-	background: #a9bbb1;
-}
-
-.copyright p a:hover::after {
-	background: #a7a294;
-}
-
-.copyright p a:active::after {
-	left: -10px;
-	
-	background: #a7a294;
-}
-*/
 
 .copyright p a:hover,
 .copyright p a:active {
@@ -1630,10 +1464,7 @@ label[for="slider-btn-3"]:hover {
 	border-color: #a7a294;
 }
 
-
-
-
-
+/*------------------Блок "хлебных крошек"----------------------*/
 
 .breadcrumbs {
 	position: absolute;
@@ -1675,7 +1506,6 @@ label[for="slider-btn-3"]:hover {
 	bottom: 0px;
 	right: 17px;
 	
-	
 	height: 1px;
 	
 	background: #a9bbb1;
@@ -1694,12 +1524,11 @@ label[for="slider-btn-3"]:hover {
 	height: 0;
 }
 
+.breadcrumbs li span {
+	cursor: default;
+}
 
-
-
-
-
-
+/*------------------Блок фильтра в каталоге----------------------*/
 
 .filters {
 	margin-bottom: 40px;
@@ -1860,6 +1689,7 @@ label[for="slider-btn-3"]:hover {
 	outline: none;
 	background: #a9b9af url(../img/select-arrow.svg) no-repeat 170px center;
 	color: white;
+	cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 0.01px;
@@ -1870,7 +1700,6 @@ label[for="slider-btn-3"]:hover {
 	display: none;
 }
 
-.popularity-filter:hover,
 .popularity-filter:hover select {
 	border: none;
 	outline: none;
@@ -1879,10 +1708,8 @@ label[for="slider-btn-3"]:hover {
 	color: #323232;
 }
 
-.popularity-filter select option
-.popularity-filter:hover select option,
-.popularity-filter select option:hover {
-	background: #ffffff;
+.popularity-filter select option {
+	background-color: #ffffff;
 	color: #323232;
 }
 
@@ -1966,11 +1793,7 @@ label[for="slider-btn-3"]:hover {
 	box-shadow: inset 0 2px 0 0 #8e8e8e;
 }
 
-
-
-
-
-
+/*------------------Блок переключателя страниц в каталоге----------------------*/
 
 .paginator {
 	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
