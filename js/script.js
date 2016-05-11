@@ -42,6 +42,7 @@ feedbackOpen.addEventListener("click", function (event) {
 	event.preventDefault();
 	feedback.classList.remove("hide");
 	modalOverlay.classList.remove("hide");
+	feedback.classList.add("feedback-form-bounce");
 	
 	if (storageFeedbackName) {
 		feedbackName.value = storageFeedbackName;
@@ -71,15 +72,19 @@ feedbackClose.addEventListener("click", function (event) {
 	event.preventDefault();
 	feedback.classList.add("hide");
 	modalOverlay.classList.add("hide");
+	feedback.classList.remove("feedback-form-bounce");
 });
 
 feedbackForm.addEventListener("submit", function (event) {
-	if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
+	if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) 
+	{
 		event.preventDefault();
-		/*Трясучка*/
+		/*Cюда не доходит код никогда!!!!*/
+		/*feedback.classList.add("modal-error");*/
 	} else {
 		localStorage.setItem("storageFeedbackName", feedbackName.value);
 		localStorage.setItem("storageFeedbackEmail", feedbackEmail.value);
+		feedback.classList.remove("feedback-form-bounce");
 	}
 });
 
@@ -88,6 +93,7 @@ window.addEventListener("keydown", function (event) {
 		if (!feedback.classList.contains("hide")) {
 			feedback.classList.add("hide");
 			modalOverlay.classList.add("hide");
+			feedback.classList.remove("feedback-form-bounce");
 		}
 	}
 });
@@ -96,6 +102,7 @@ modalOverlay.addEventListener("click", function (event) {
 	event.preventDefault();
 	feedback.classList.add("hide");
 	modalOverlay.classList.add("hide");
+	feedback.classList.remove("feedback-form-bounce");
 });
 
 searchOpen.addEventListener("mouseover", function () {
