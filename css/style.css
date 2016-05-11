@@ -151,7 +151,7 @@ input[type="submit"]:active {
 
 .field-container input,
 .field-container textarea {
-	padding: 10px 15px;
+	padding: 8px 0px 10px 12px;
 	
 	border-radius: 5px;
 	border: 1px solid #d3d3d2;
@@ -439,6 +439,8 @@ input[type="submit"]:active {
 }
 
 .user-block-item:hover .user-block-form-container {
+	top: 25px;
+	
 	display: block;
 }
 
@@ -493,7 +495,7 @@ input[type="submit"]:active {
 
 .user-block-item .user-block-form-container {
 	position: absolute;
-	top: 30px;
+	top: 27px;
 	z-index: 30;
 }
 
@@ -503,17 +505,20 @@ input[type="submit"]:active {
 }
 
 .user-block .search-form-container {
-	left: -235px;
+	left: -308px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif; 
 }
 
 .user-block .search-form {
-	padding: 20px 15px;
+	padding: 20px 15px 20px 15px;
 }
 
 .search-form input {
-	width: 239px;
+	width: 311px;
+	padding-bottom: 9px;
+	padding-top: 9px;
+    padding-left: 13px;
 }
 
 /*------------------Блок пользователя: вход----------------------*/
@@ -533,25 +538,25 @@ input[type="submit"]:active {
 }
 
 .user-block .login-form-container {
-	left: -217px;
+	left: -183px;
 	
-	width: 310px;
+	width: 277px;
 	
 	font: 14px / 24px "Roboto Regular", Helvetica, sans-serif;
 }
 
 .user-block .login-form {
-	padding: 20px 20px;
+	padding: 20px 0 16px 20px;
 }
 
 .login-form .field-container input {
-	width: 239px;
+	width: 227px;
 	margin-bottom: 20px;
 }
 
 .login-form .recover,
 .login-form .registration {
-	position: relative;
+	/*position: relative;*/
 	
 	margin-right: 15px;
 	
@@ -572,10 +577,10 @@ input[type="submit"]:active {
 
 .login-form form input[type="submit"] {
 	float: left;
-	padding: 10px 25px;
+	padding: 10px 24px 10px 24px;
 	margin-right: 20px;
 	
-	border-radius: 15px;
+	border-radius: 20px;
 	color: #fefefe;
 }
 
@@ -984,11 +989,10 @@ label[for="slider-btn-3"]:hover {
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	white-space: normal;
 	/*cделать подчеркивание выше-------------------------------------------------------------------------------------------*/
-	font-size: 14px;
-	line-height: 10px;
+	/*font-size: 14px;
+	line-height: 10px;*/
 	
 	border-bottom: 1px solid #adbdb4;
-	background: green;
 }
 
 .hit-container {
