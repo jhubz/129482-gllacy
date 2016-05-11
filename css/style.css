@@ -978,6 +978,10 @@ label[for="slider-btn-3"]:hover {
 	margin-bottom: 40px;
 }
 
+.catalog-products {
+	margin-bottom: 46px;
+}
+
 .products ul {
 	margin: 0px;
 	padding: 0px;
@@ -1004,7 +1008,7 @@ label[for="slider-btn-3"]:hover {
 }
 
 .products li {
-	margin-bottom: 40px;
+	margin-bottom: 37px;
 } 
 
 .product:nth-child(4n) {
@@ -1037,6 +1041,7 @@ label[for="slider-btn-3"]:hover {
 .product p {
 	display: inline;
 	margin: 0;
+	padding: 0 5px;
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	
@@ -1876,7 +1881,7 @@ label[for="slider-btn-3"]:hover {
 	right: -7px;
 	bottom: 0;
 	
-	padding-bottom: 30px;
+	padding-bottom: 33px;
 	
 	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
 	text-align: right;
