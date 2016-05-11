@@ -42,29 +42,33 @@
     font-style: normal;
 }
 
+@-webkit-keyframes bounce {
+	0% 		{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
+	70% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
+	90% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
+	100% 	{	-webkit-transform: translateY(0);	transform: translateY(0);	}
+}
+
 @keyframes bounce {
-	0% 		{	transform: translateY(-2000px);	}
-	70% 	{	transform: translateY(30px);	}
-	90% 	{	transform: translateY(-10px);	}
-	100% 	{	transform: translateY(0);	}
+	0% 		{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
+	70% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
+	90% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
+	100% 	{	-webkit-transform: translateY(0);	transform: translateY(0);	}
+}
+
+@-webkit-keyframes bounce-back {
+	0% 		{	-webkit-transform: translateY(0);	transform: translateY(0);	}
+	70% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
+	90% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
+	100% 	{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
 }
 
 @keyframes bounce-back {
-	0% 		{	transform: translateY(0);	}
-	70% 	{	transform: translateY(-10px);	}
-	90% 	{	transform: translateY(30px);	}
-	100% 	{	transform: translateY(-2000px);	}
+	0% 		{	-webkit-transform: translateY(0);	transform: translateY(0);	}
+	70% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
+	90% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
+	100% 	{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
 }
-
-/*Анимация тряски модального окна
-@keyframes shake {
-	0%, 100% 							{ transform: translateX(0); 		}
-	10%, 30%, 50%, 70%, 90% 	{ transform: translateX(-10px); 	}
-	20%, 40%, 60%, 80% 			{ transform: translateX(10px); 	}
-}
-*/
-
-/*------------------Основные стили----------------------*/
 
 html {
 	padding: 0;
@@ -92,6 +96,7 @@ body {
 	background-position: top center;
 	
 	-webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+	-webkit-transition: background-image 0,5s ease, background-color 0,5s ease;
 	transition: background-image 0,5s ease, background-color 0,5s ease;
 }
 
@@ -253,18 +258,15 @@ input[type="submit"]:active {
 }
 
 .feedback-form-bounce {
-	animation: bounce 0.6s;
+	-webkit-animation: bounce 0.6s;
+	        animation: bounce 0.6s;
 }
 
 .feedback-form-bounce-back {
-	animation: bounce-back 0.6s;
+	-webkit-animation: bounce-back 0.6s;
+	        animation: bounce-back 0.6s;
 }
 
-/* Класс для тряски модального окна
-.modal-error {
-	animation: shake 0.6s;
-}
-*/
 .container {
 	width: 1146px;
 	margin: 0 auto;
@@ -601,7 +603,6 @@ input[type="submit"]:active {
 .login-form .recover,
 .login-form .registration {
 	display: inline-block;
-	/*margin-right: 15px;*/
 	
 	font: 13px / 24px "Roboto Regular", Helvetica, sans-serif;
 	line-height: 14px;
@@ -999,7 +1000,6 @@ label[for="slider-btn-3"]:hover {
 }
 
 .product:hover p {
-	/*border: none;*/
 	box-shadow: none;
 }
 
@@ -1039,8 +1039,7 @@ label[for="slider-btn-3"]:hover {
 	margin: 0;
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
-	/*cделать подчеркивание выше-------------------------------------------------------------------------------------------*/
-	/*border-bottom: 1px solid #adbdb4;*/
+	
 	box-shadow: inset 0 -1px 0 0 #adbdb4;
 	cursor: default;
 }
@@ -1600,6 +1599,8 @@ label[for="slider-btn-3"]:hover {
 	margin-left: 15px;
 	
 	font: 14px / 16px "Roboto Medium", Helvetica, sans-serif;
+	
+	cursor: default;
 }
 
 .filter-container {
