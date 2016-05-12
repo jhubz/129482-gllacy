@@ -76,11 +76,8 @@ feedbackClose.addEventListener("click", function (event) {
 });
 
 feedbackForm.addEventListener("submit", function (event) {
-	if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) 
-	{
+	if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
 		event.preventDefault();
-		/*Cюда не доходит код никогда!!!!*/
-		/*feedback.classList.add("modal-error");*/
 	} else {
 		localStorage.setItem("storageFeedbackName", feedbackName.value);
 		localStorage.setItem("storageFeedbackEmail", feedbackEmail.value);
@@ -121,7 +118,6 @@ loginOpen.addEventListener("mouseover", function () {
 loginForm.addEventListener("submit", function (event) {
 	if (!loginEmail.value || !loginPassword.value) {
 		event.preventDefault();
-		/*Трясучка*/
 	} else {
 		localStorage.setItem("storageLoginEmail", loginEmail.value);
 	}
@@ -130,6 +126,5 @@ loginForm.addEventListener("submit", function (event) {
 subscribeForm.addEventListener("submit", function (event) {
 	if (!subscribeEmail.value) {
 		event.preventDefault();
-		/*Трясучка*/
 	}
 });

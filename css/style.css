@@ -43,31 +43,31 @@
 }
 
 @-webkit-keyframes bounce {
-	0% 		{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
-	70% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
-	90% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
-	100% 	{	-webkit-transform: translateY(0);	transform: translateY(0);	}
+	0% 		{	-webkit-transform: translateY(-2000px);
+								transform: translateY(-2000px);	}
+								
+	70% 	{	-webkit-transform: translateY(30px);	
+								transform: translateY(30px);	}
+								
+	90% 	{	-webkit-transform: translateY(-10px);
+								transform: translateY(-10px);	}
+								
+	100% 	{	-webkit-transform: translateY(0);
+								transform: translateY(0);	}
 }
 
 @keyframes bounce {
-	0% 		{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
-	70% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
-	90% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
-	100% 	{	-webkit-transform: translateY(0);	transform: translateY(0);	}
-}
-
-@-webkit-keyframes bounce-back {
-	0% 		{	-webkit-transform: translateY(0);	transform: translateY(0);	}
-	70% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
-	90% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
-	100% 	{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
-}
-
-@keyframes bounce-back {
-	0% 		{	-webkit-transform: translateY(0);	transform: translateY(0);	}
-	70% 	{	-webkit-transform: translateY(-10px);	transform: translateY(-10px);	}
-	90% 	{	-webkit-transform: translateY(30px);	transform: translateY(30px);	}
-	100% 	{	-webkit-transform: translateY(-2000px);	transform: translateY(-2000px);	}
+	0% 		{	-webkit-transform: translateY(-2000px);
+								transform: translateY(-2000px);	}
+								
+	70% 	{	-webkit-transform: translateY(30px);	
+								transform: translateY(30px);		}
+								
+	90% 	{	-webkit-transform: translateY(-10px);
+								transform: translateY(-10px);		}
+								
+	100% 	{	-webkit-transform: translateY(0);
+								transform: translateY(0);			}
 }
 
 html {
@@ -86,6 +86,7 @@ body {
 
 .body-content {
 	width: 100%;
+	min-width: 1200px;
 	margin-right: 0;
 	padding: 0;
 	
@@ -93,10 +94,9 @@ body {
 	
 	color: #ffffff;
 	background-repeat: no-repeat;
-	background-position: top center;
+	background-position: center top;
 	
 	-webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-	-webkit-transition: background-image 0,5s ease, background-color 0,5s ease;
 	transition: background-image 0,5s ease, background-color 0,5s ease;
 }
 
@@ -1022,7 +1022,6 @@ label[for="slider-btn-3"]:hover {
 	
 	border-radius: 50%;
 	overflow: hidden;
-	background: green;
 }
 
 .product-price {
@@ -1041,7 +1040,7 @@ label[for="slider-btn-3"]:hover {
 .product p {
 	display: inline;
 	margin: 0;
-	padding: 0 5px;
+	margin: 0 5px;
 	
 	font: 16px / 22px "Roboto Medium", Helvetica, sans-serif;
 	
@@ -1082,7 +1081,7 @@ label[for="slider-btn-3"]:hover {
 
 .features-container {
 	margin-bottom: 40px;
-	padding: 22px 0 9px 20px;
+	padding: 22px 0 25px 20px;
 	
 	font: 16px / 22px "Roboto Regular", Helvetica, sans-serif;
 	
@@ -1099,23 +1098,24 @@ label[for="slider-btn-3"]:hover {
 
 .features-left-column {
 	float: left;
-	padding-top: 16px;
+	/*padding-top: 16px;*/
 }
 
 .features-right-column {
 	float: right;
-	padding-top: 16px;
+	/*padding-top: 16px;*/
 }
 
 .feature {
 	width: 480px;
-	padding-top: 6px;
+	padding-top: 22px;
 	padding-left: 57px;
-	margin-top: 0;
+	margin: 0;
+	
 	
 	font-family: "Roboto Regular", Helvetica, sans-serif;
 	
-	background: no-repeat 0 -6px;
+	background: no-repeat 0 10px;
 }
 
 .features-right-column .feature {
@@ -1881,7 +1881,7 @@ label[for="slider-btn-3"]:hover {
 	right: -7px;
 	bottom: 0;
 	
-	padding-bottom: 33px;
+	padding-bottom: 31px;
 	
 	font: 16px / 18px "Roboto Medium", Helvetica, sans-serif;
 	text-align: right;
