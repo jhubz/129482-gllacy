@@ -183,51 +183,42 @@ input[type="submit"]:active {
 	border: none;
 }
 
-.field-container input,
-.field-container textarea {
+.field-container .field-container-input {
 	padding: 8px 0px 10px 12px;
 	
 	border-radius: 5px;
 	border: 1px solid #d3d3d2;
 }
 
-.field-container input:hover,
-.field-container textarea:hover {
+.field-container .field-container-input:hover {
 	box-shadow: 0 0 0 1px #d3d3d2;
 }
 
-.field-container input:focus,
-.field-container textarea:focus {
+.field-container .field-container-input:focus {
 	box-shadow: 0 0 0 1px #8fbdec;
 	outline: none;
 }
 
-.field-container input:focus::-webkit-input-placeholder,
-.field-container textarea:focus::-webkit-input-placeholder {
+.field-container .field-container-input:focus::-webkit-input-placeholder {
 	color: #ffffff;
 }
 
-.field-container input:focus::-moz-placeholder,
-.field-container textarea:focus::-moz-placeholder {
+.field-container .field-container-input:focus::-moz-placeholder {
 	color: #ffffff;
 }
 
-.field-container input:focus:-ms-input-placeholder,
-.field-container textarea:focus:-ms-input-placeholder {
+.field-container .field-container-input:focus:-ms-input-placeholder {
 	color: #ffffff;
 }
 
-.field-container input:focus + label,
-.field-container textarea:focus + label,
-.field-container input:focus:valid + label,
-.field-container textarea:focus:valid + label {
+.field-container-input:focus + label,
+.field-container-input:focus:valid + label {
 	display: inline;
 	
 	color: #8fbdec;
 }
 
-.field-container input:valid + label,
-.field-container textarea:valid + label {
+.field-container-input:valid + label {
 	display: inline;
 	
 	color: #a0a0a0;
@@ -260,11 +251,6 @@ input[type="submit"]:active {
 .feedback-form-bounce {
 	-webkit-animation: bounce 0.6s;
 	        animation: bounce 0.6s;
-}
-
-.feedback-form-bounce-back {
-	-webkit-animation: bounce-back 0.6s;
-	        animation: bounce-back 0.6s;
 }
 
 .container {
@@ -520,7 +506,7 @@ input[type="submit"]:active {
 	color: #333333;
 }
 
-.user-block .user-block-item:hover > a {
+.user-block-item:hover > a {
 	color: #333333;
 }
 
@@ -531,7 +517,7 @@ input[type="submit"]:active {
 	background-position: center;
 }
 
-.user-block .search-toggle > a {
+.search-toggle > a {
 	padding: 16px;
 }
 
@@ -595,7 +581,7 @@ input[type="submit"]:active {
 	padding: 22px 0 20px 20px;
 }
 
-.login-form .field-container input {
+.login-form .field-container-input {
 	width: 227px;
 	margin-bottom: 20px;
 }
@@ -620,11 +606,11 @@ input[type="submit"]:active {
 	border-color: #f9cdc4;
 }
 
-.login-form form input[type="password"] {
+.login-form input[type="password"] {
 	margin-bottom: 18px;
 }
 
-.login-form form input[type="submit"] {
+.login-form input[type="submit"] {
 	float: left;
 	padding: 10px 24px 10px 24px;
 	margin-right: 20px;
@@ -683,7 +669,7 @@ input[type="submit"]:active {
 	border-bottom: 1px solid #ccccc9;
 }
 
-.bucket-form table td {
+.bucket-form td {
 	vertical-align: middle;
 	
 	cursor: default;
@@ -693,7 +679,7 @@ input[type="submit"]:active {
 	position: relative;
 }
 
-.bucket-form .cell-2 img {
+.bucket-form .bucket-product-photo {
 	width: 33px;
 	height: 33px;
 }
@@ -863,7 +849,7 @@ body > input[type="radio"] {
 	cursor: pointer;
 	outline: none;
 }
-
+																
 .slider-btn-1-class:checked ~ .body-content .slide-1,
 .slider-btn-2-class:checked ~ .body-content .slide-2,
 .slider-btn-3-class:checked ~ .body-content .slide-3 {
@@ -897,10 +883,6 @@ body > input[type="radio"] {
 .slider-btn-2-class:checked ~ .body-content {
 	background-color: #8996a6;
 	background-image: url(../img/slide-2.png);
-}
-
-.slider-btn-2-class:checked ~ .body-content .product .hide-product-container {
-	background: #89a69f;
 }
 
 .slider-btn-3-class:checked ~ .body-content {
@@ -1098,12 +1080,10 @@ label[for="slider-btn-3"]:hover {
 
 .features-left-column {
 	float: left;
-	/*padding-top: 16px;*/
 }
 
 .features-right-column {
 	float: right;
-	/*padding-top: 16px;*/
 }
 
 .feature {
@@ -1112,10 +1092,9 @@ label[for="slider-btn-3"]:hover {
 	padding-left: 57px;
 	margin: 0;
 	
-	
 	font-family: "Roboto Regular", Helvetica, sans-serif;
 	
-	background: no-repeat 0 10px;
+	background: url(../img/features-sprite.png) no-repeat;
 }
 
 .features-right-column .feature {
@@ -1129,19 +1108,19 @@ label[for="slider-btn-3"]:hover {
 }
 
 .feature-production {
-	background-image: url(../img/feature-icecream.png);
+    background-position: -30px -129px;
 }
 
 .feature-natural {
-	background-image: url(../img/feature-leaf.png);
+	background-position: -30px -238px;
 }
 
 .feature-cooperation {
-	background-image: url(../img/feature-cow.png);
+	background-position: -30px -20px;
 }
 
 .feature-termopack {
-	background-image: url(../img/feature-thermometer.png);
+	background-position: -30px -347px;
 }
 
 /*------------------Блок дополнительных опций----------------------*/
@@ -1475,19 +1454,17 @@ label[for="slider-btn-3"]:hover {
 	width: 140px;
 }
 
-.footer-menu li a {
+.footer-menu a {
 	position: relative;
 	
 	margin-left: 20px;
-}
-
-.footer-menu li a {
+	
 	text-decoration: none;
 	border-bottom: 1px solid #a9bbb1;
 }
 
-.footer-menu li a:hover,
-.footer-menu li a:active {
+.footer-menu a:hover,
+.footer-menu a:active {
 	color: #ffbc9e;
 	border-color: #a7a294;
 }
@@ -1516,15 +1493,15 @@ label[for="slider-btn-3"]:hover {
 	font: 12px / 18px "Roboto Regular", Helvetica, sans-serif;
 }
 
-.copyright p a {
+.copyright a {
 	position: relative;
 	
 	text-decoration: none;
 	border-bottom: 1px solid #a9bbb1;
 }
 
-.copyright p a:hover,
-.copyright p a:active {
+.copyright a:hover,
+.copyright a:active {
 	color: #ffbc9e;
 	border-color: #a7a294;
 }
@@ -1560,11 +1537,11 @@ label[for="slider-btn-3"]:hover {
 	content: "";
 }
 
-.breadcrumbs li a {
+.breadcrumbs a {
 	text-decoration: none;
 }
 
-.breadcrumbs li a::after {
+.breadcrumbs a::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -1576,20 +1553,20 @@ label[for="slider-btn-3"]:hover {
 	background: #a9bbb1;
 }
 
-.breadcrumbs li:hover a::after {
+.breadcrumbs-item:hover a::after {
 	background: #a7a294;
 }
 
-.breadcrumbs li:last-child a {
+.breadcrumbs-item:last-child a {
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.breadcrumbs li:last-child a::after {
+.breadcrumbs-item:last-child a::after {
 	height: 0;
 }
 
-.breadcrumbs li span {
+.breadcrumbs span {
 	cursor: default;
 }
 
@@ -1632,10 +1609,6 @@ label[for="slider-btn-3"]:hover {
 	cursor: pointer;
 }
 
-.filter select option {
-	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
-}
-
 .fat-filter {
     padding-top: 5px;
     padding-left: 26px;
@@ -1674,7 +1647,7 @@ label[for="slider-btn-3"]:hover {
 	display: none;
 }
 
-.filter label .checkbox-indicator {
+.fill-filter .checkbox-indicator {
 	position: absolute;
 	left: -32px;
 	
@@ -1685,12 +1658,12 @@ label[for="slider-btn-3"]:hover {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
-.filter label .checkbox-indicator:hover,
-.filter label:hover .checkbox-indicator {
+.filler-label .checkbox-indicator:hover,
+.filler-label:hover .checkbox-indicator {
 	box-shadow: inset 0 0 0 2px #ffffff;
 }
 
-.filter input[type="checkbox"]:checked + label .checkbox-indicator::before {
+.filler-input:checked + label .checkbox-indicator::before {
 	content: "";
 	position: absolute;
 	top: 11px;
@@ -1705,7 +1678,7 @@ label[for="slider-btn-3"]:hover {
 	border-radius: 1px;
 }
 
-.filter input[type="checkbox"]:checked + label .checkbox-indicator::after {
+.filler-input:checked + label .checkbox-indicator::after {
 	content: "";
 	position: absolute;
 	top: 9px;
@@ -1720,7 +1693,7 @@ label[for="slider-btn-3"]:hover {
 	border-radius: 1px;
 }
 
-.filter label .radio-indicator {
+.fat-label .radio-indicator {
 	position: absolute;
 	top: 2px;
 	left: -32px;
@@ -1732,12 +1705,12 @@ label[for="slider-btn-3"]:hover {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
-.filter label .radio-indicator:hover,
-.filter label:hover .radio-indicator {
+.fat-label .radio-indicator:hover,
+.fat-label:hover .radio-indicator {
 	box-shadow: inset 0 0 0 2px #ffffff;
 }
 
-.filter input[type="radio"]:checked + label .radio-indicator::after {
+.fat-input:checked + label .radio-indicator::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -1750,7 +1723,7 @@ label[for="slider-btn-3"]:hover {
 	border-radius: 50%;
 }
 
-.filters .filter-container:last-child .filter {
+.filter-container:last-child .filter {
 	padding: 0;
 	margin-top: 38px;
 	
@@ -1789,7 +1762,9 @@ label[for="slider-btn-3"]:hover {
 	color: #323232;
 }
 
-.popularity-filter select option {
+.filter-select option {
+	font: 14px / 16px "Roboto Regular", Helvetica, sans-serif;
+
 	background-color: #ffffff;
 	color: #323232;
 }

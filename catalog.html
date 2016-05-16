@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси-каталог-сливочное</title>
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	
 	<body>
@@ -67,7 +67,7 @@
 
 								<form action="#" method="post">
 									<div class="field-container">
-										<input type="search" name="search" id="search-field" placeholder="Что ищем&#63;" required>
+										<input type="search" class="field-container-input" name="search" id="search-field" placeholder="Что ищем&#63;" required>
 										<label class="hide" for="search-field">Что ищем&#63;</label>
 									</div>
 								</form>
@@ -85,11 +85,11 @@
 
 								<form action="#" method="post">
 									<div class="field-container">
-										<input type="email" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
+										<input type="email" class="field-container-input" name="login-email" id="login-email-field" placeholder="Электронная почта" required>
 										<label class="hide" for="login-email-field">Электронная почта</label>
 									</div>
 									<div class="field-container">
-										<input type="password" name="password" id="password-field" placeholder="Пароль" required>
+										<input type="password" class="field-container-input" name="password" id="password-field" placeholder="Пароль" required>
 										<label class="hide" for="password-field">Пароль</label>
 									</div>
 									<input type="submit" value="Войти">
@@ -188,9 +188,9 @@
 		
 			<div class="breadcrumbs">
 					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="#">Каталог</a></li>
-						<li><span>Сливочное</span></li>
+						<li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+						<li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+						<li class="breadcrumbs-item"><span>Сливочное</span></li>
 					</ul>
 				</div>
 			
@@ -201,7 +201,7 @@
 				<div class="filter-container">
 					<label for="sort">Сортировка:</label>
 					<div class="filter popularity-filter">
-						<select name="sort" id="sort">
+						<select class="filter-select" name="sort" id="sort">
 							<option value="popularity" selected>по популярности</option>
 							<option value="cheap">сначала недорогие</option>
 							<option value="expensive">сначала дорогие</option>
@@ -225,26 +225,26 @@
 					<span>Жирность:</span>
 					<div class="filter fat-filter">
 
-						<input type="radio" id="fat-0" name="fat" value="0">
-						<label for="fat-0">
+						<input type="radio" class="fat-input" id="fat-0" name="fat" value="0">
+						<label class="fat-label" for="fat-0">
 							<span class="radio-indicator"></span>
 							0%
 						</label>
 
-						<input type="radio" id="fat-up-to-10" name="fat" value="<10" checked>
-						<label for="fat-up-to-10">
+						<input type="radio" class="fat-input" id="fat-up-to-10" name="fat" value="<10" checked>
+						<label class="fat-label" for="fat-up-to-10">
 							<span class="radio-indicator"></span>
 							до 10%
 						</label>
 
-						<input type="radio" id="fat-up-to-30" name="fat" value="<30">
-						<label for="fat-up-to-30">
+						<input type="radio" class="fat-input" id="fat-up-to-30" name="fat" value="<30">
+						<label class="fat-label" for="fat-up-to-30">
 							<span class="radio-indicator"></span>
 							до 30%
 						</label>
 
-						<input type="radio" id="fat-above-30" name="fat" value=">30">
-						<label for="fat-above-30">
+						<input type="radio" class="fat-input" id="fat-above-30" name="fat" value=">30">
+						<label class="fat-label" for="fat-above-30">
 							<span class="radio-indicator"></span>
 							выше 30%
 						</label>
@@ -255,37 +255,37 @@
 				<span>Наполнители:</span>
 					<div class="filter fill-filter">
 
-						<input type="checkbox" id="filler-chocolate" name="filler"
+						<input type="checkbox" class="filler-input" id="filler-chocolate" name="filler"
 									value="chocolate" checked>
-						<label for="filler-chocolate">
+						<label class="filler-label" for="filler-chocolate">
 							<span class="checkbox-indicator"></span>
 							шоколадные
 						</label>
 
-						<input type="checkbox" id="filler-sugar" name="filler"
+						<input type="checkbox" class="filler-input" id="filler-sugar" name="filler"
 									value="sugar" checked>
-						<label for="filler-sugar">
+						<label class="filler-label" for="filler-sugar">
 							<span class="checkbox-indicator"></span>
 							сахарные присыпки
 						</label>
 
-						<input type="checkbox" id="filler-fruit" name="filler"
+						<input type="checkbox" class="filler-input" id="filler-fruit" name="filler"
 									value="fruit">
-						<label for="filler-fruit">
+						<label class="filler-label" for="filler-fruit">
 							<span class="checkbox-indicator"></span>
 							фрукты
 						</label>
 
-						<input type="checkbox" id="filler-syrup" name="filler" 
+						<input type="checkbox" class="filler-input" id="filler-syrup" name="filler" 
 									value="syrup">
-						<label for="filler-syrup">
+						<label class="filler-label" for="filler-syrup">
 							<span class="checkbox-indicator"></span>
 							сиропы
 						</label>
 
-						<input type="checkbox" id="filler-jam" name="filler" 
+						<input type="checkbox" class="filler-input" id="filler-jam" name="filler" 
 									value="jam">
-						<label for="filler-jam">
+						<label class="filler-label" for="filler-jam">
 							<span class="checkbox-indicator"></span>
 							джемы
 						</label>
@@ -551,9 +551,9 @@
 
 				</div>
 			</footer>
-	
-		<script src="js/inner-script.js"></script>
-	
+
+		<script src="js/inner-script.min.js"></script>
+
 	</body>
 	
 </html>
